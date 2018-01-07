@@ -47,14 +47,13 @@
 	<div id="content">
 		<?php
 		
-		if(isset($_GET['opt'])) {
+		if(isset($_GET['opt'])) { //??later dynamically depending on entered service
 			if($_GET['opt'] == 'data') {
 				include ('vw-data_entry_OPD.php');
 			}
 			elseif($_GET['opt'] == 'report') {
-				echo '<p>Overview of all patients</p>';
+				echo '<p>Overview of all patients indicators per service </p>';
 				echo '<br>';
-				include ('vw-table_central_registration.php');
 			}
 			elseif($_GET['opt'] == 'con') {
 				include ('vw-contact.php');		
@@ -69,8 +68,7 @@
 		else {
 			echo '<p>Welcome to NKOZI Medical Information for Operational Support System</p>';
 				echo '<br>';
-				//include ('vw-.php');
-		}
+			}
 		?>
 	</div>	
 	
