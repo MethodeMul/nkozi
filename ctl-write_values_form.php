@@ -28,7 +28,7 @@ foreach($_POST as $key => $value)
 		$when = $_POST['year'] . "wk" . $_POST['week'];
 		$where = $_POST['service'];
 
-		$find_record_query="select id from `msf`.`record` where
+		$find_record_query="select id from `nkozi`.`record` where
 				what=".$what." AND who=".$who."
 						AND `when`='".$when."' AND `where`='".$where."';";
 		$rst_query=mysqli_query($connection, $find_record_query);
@@ -47,7 +47,7 @@ foreach($_POST as $key => $value)
 		if($row>0) //It is an update
 		{
 			$er.= "Updating record";
-			$update_query =  "UPDATE `msf`.`record`	SET ";
+			$update_query =  "UPDATE `nkozi`.`record`	SET ";
 			$update_query .= " `value` = " 	. $encoded_value . ",";
 			$update_query .= " `upd_date` = now()";
 			$update_query .= " WHERE `id` =".$row[0].";";
@@ -69,7 +69,7 @@ foreach($_POST as $key => $value)
 		elseif($encoded_value != 'NULL') { //It is a new record and it is not NULL
 			// Insert values
 			$er.= "Inserting record";
-			$insert_query="INSERT INTO `msf`.`record`
+			$insert_query="INSERT INTO `nkozi`.`record`
 					(`value`, `what`, `who`, `when`, `where`, `upd_date`)
 					VALUES 	(".$encoded_value.",".$what.",".$who.",'".$when."','".$where."', now())";
 			$rst_query = mysqli_query($connection, $insert_query);
