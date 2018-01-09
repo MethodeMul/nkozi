@@ -26,7 +26,7 @@
 	?>
 		<!--dynamic navigation-->	
 	<div id="navigation">	
-		<a href="vw-home.php"><img src="images/stheto" border="0"></a> <!--need to look for a stheto.ico-->
+		<a href="vw-home.php"><img src="" border="0"></a> <!--need to look for a stheto.ico-->
 		<a href="vw-home.php?opt=data">Data entry</a>
 		<a href="vw-home.php?opt=report">Reports</a>
 		<!--<a href="vw-home.php?opt=admin">Administrative</a>-->

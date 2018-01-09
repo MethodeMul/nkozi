@@ -37,6 +37,11 @@ $(document).ready(function() {
 		var no_spl_char = yourInput.replace(/[^0-9]/, '');
 		$(this).val(no_spl_char);
 	});
+
+
+
+
+
 	//----------------------------------
 
 	//------- Cookie management
@@ -60,6 +65,9 @@ $(document).ready(function() {
 	$('#year').val($.cookie("year"));
 	$('#week').val($.cookie("week"));
 	//---------------------------
+
+
+
 	
 	//--------- DataTables management
     var table1 = $('#Diagnostics').dataTable({
@@ -68,7 +76,7 @@ $(document).ready(function() {
 		columns: [
 			{ "width": "40px" },
 			{ "width": "30px" },
-			{ "width": "30px" }
+			{ "width": "30px" }nnn
 		]
         //processing: true,
         //serverSide: true,
@@ -94,6 +102,9 @@ $(document).ready(function() {
 	    	//"success": function (dataStr) { console.log(dataStr); }
         }*/
     });
+
+
+
     //------------------------
 
     //-------- Submit button event to call controller and store values
