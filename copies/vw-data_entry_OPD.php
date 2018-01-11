@@ -38,13 +38,10 @@ $(document).ready(function() {
 		$(this).val(no_spl_char);
 	});
 
-
-
-
-
 	//----------------------------------
 
 	//------- Cookie management
+	
 	$( "#service" ).change(function() {
 		  //console.log( "New value for select = " + $('#service').val() );
 		$.cookie("service", $('#service').val());
@@ -67,8 +64,6 @@ $(document).ready(function() {
 	//---------------------------
 
 
-
-	
 	//--------- DataTables management
     var table1 = $('#Diagnostics').dataTable({
 	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
@@ -78,14 +73,7 @@ $(document).ready(function() {
 			{ "width": "30px" },
 			{ "width": "30px" }
 		]
-        //processing: true,
-        //serverSide: true,
-        /*ajax: {
-            url: "ctl-server_processing.php",
-            data: { table: 'patient_full_emr' },
-	    	//"success": function (dataStr) { console.log(dataStr); }
-        }*/
-    });
+ });
 
     var table2 = $('#TestMalaria').dataTable({
 	    dom: 'rt',
@@ -94,14 +82,7 @@ $(document).ready(function() {
 			{ "width": "70px" },
 			{ "width": "30px" }
 		]
-        //processing: true,
-        //serverSide: true,
-        /*ajax: {
-            url: "ctl-server_processing.php",
-            data: { table: 'patient_full_emr' },
-	    	//"success": function (dataStr) { console.log(dataStr); }
-        }*/
-    });
+       });
 
 
 
@@ -111,18 +92,7 @@ $(document).ready(function() {
 	$('.submit').click(function(event) {
 		//e.preventDefault();
 		var $form = $(this).closest('form'); // get the form element this button belongs to
-		/*var $malariaU5 = $('#mal-age_u5').val();
-		//var $malariaU5 = $('#mal-age_u5', $(this).parent()).val();
-		//var $malu5=document.getElementById('mal-age_u5').value;
-		$posRateMalaria = Math.round($('#malaria_pos').val()/$('#malaria_test').val()*100);
-        alert(
-                "The following data would have been submitted to the server: \n\n"+
-                "Malaria under 5 = " + $('#mal-age_u5').val() + "\n" +
-                "Malaria over 5 = " + $('#mal-age_o5').val() + "\n" +
-                "Test Malaria = " + $('#malaria_test').val() + "\n" +
-                "Positive tests Malaria = " + $('#malaria_pos').val() + "\n" +
-                "Positivity rate Malaria = " + $posRateMalaria + "%\n"
-            );*/
+		
 	    jQuery.post( 'ctl-write_values_form.php', $form.serialize(),
 	    	    function( data ) {
     	    		alert("Values encoded successfully");
@@ -145,29 +115,19 @@ $(document).ready(function() {
 	   	
 	});
 
-
 	//--------------------------------
 
-	//$("#enc_date").datepicker({ dateFormat: 'yy-mm-dd' });
-	/* Send the data using post and put the results in a div */
-	
 } );
 </script>
 
 <div id="er"><?php if(isset($er) && $er != '') echo $er; else echo '<div id="er_bl">Have a good encoding day</div>'; ?></div>
 
 
-<form action=# method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
 
 	<input type="submit" name="submit" id='submit'
 		value="Submit encoded values" class="submit">
 
-	<!--  >div style="padding-top: 30px;">
-		<label>Encoded date</label> <input type="text" name="enc_date"
-			id="enc_date"
-			value="<?php if(isset($_GET['enc_date'])) echo $_GET['enc_date']; else echo ''; ?>" />
-	</div-->
-	
 	<div style="padding-top: 30px;">
 		<label><b>Encoded week and year</b></label>
 		<table style="padding-top: 15px;">
@@ -193,12 +153,15 @@ $(document).ready(function() {
 		</table>
 	</div>
 	
-	<div style="padding-top: 30px;">
+	<div style="padding-top: 90;">
 		<label><b>Encoded service</b></label> 
 		<br><br>
 		<select name="service" id="service">
-			<option value="OPDMasisi">OPD Masisi</option>
-			<option value="OPDNyabiondo">OPD Nyabiondo</option>
+			<option value="OPDNkozi">OPD Nkozi</option>
+			<option value="EDNkozi">ED Nkozi</option>
+			<option value="IPDNkozi">IPD Nkozi</option>
+			<option value="MaternityNkozi">Maternity Nkozi</option>
+			<option value="ImmunizationNkozi">Immunization Nkozi</option>
 		</select>
 	</div>
 
