@@ -64,6 +64,7 @@ foreach($_POST as $key => $value)
 			}
 			else {
 				$result = 1;
+				header("refresh:1; url=vw-data_entry_OPD.php");
 			}
 		}
 		elseif($encoded_value != 'NULL') { //It is a new record and it is not NULL
@@ -85,6 +86,8 @@ foreach($_POST as $key => $value)
 			}
 			else {
 				$result = 1;
+				//echo ("<meta http-equiv='refresh' content='1'>");
+				header("refresh:1; url=vw-data_entry_OPD.php");
 			}
 		}
 	}
