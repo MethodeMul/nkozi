@@ -214,6 +214,7 @@ $(document).ready(function() {
 			<option value="IPDNkozi">IPD Nkozi</option>
 			<option value="MaternityNkozi">Maternity Nkozi</option>
 			<option value="ImmunizationNkozi">Immunization Nkozi</option>
+			<option value="Labo">Immunization Nkozi</option>
 		</select>
 	</div>
 
