@@ -65,11 +65,7 @@ $(document).ready(function() {
 
 
 	//--------- DataTables management
-<<<<<<< HEAD
     var table1 = $('#Diagnostics_new').dataTable({
-=======
-    var table1 = $('#Diagnostics').dataTable({
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
         //"iDisplayLength": 25,
 		columns: [
@@ -77,7 +73,6 @@ $(document).ready(function() {
 			{ "width": "30px" },
 			{ "width": "30px" }
 		]
-<<<<<<< HEAD
  	});
 
  	var table2 = $('#Diagnostics_old').dataTable({
@@ -91,11 +86,6 @@ $(document).ready(function() {
  	});
 
     var table3 = $('#TestMalaria').dataTable({
-=======
- });
-
-    var table2 = $('#TestMalaria').dataTable({
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 	    dom: 'rt',
         //"iDisplayLength": 25,
 		columns: [
@@ -104,7 +94,6 @@ $(document).ready(function() {
 		]
        });
 
-<<<<<<< HEAD
     var table4 = $('#HIVTest').dataTable({
 	    dom: 'rt',
         //"iDisplayLength": 25,
@@ -122,9 +111,6 @@ $(document).ready(function() {
 			{ "width": "30px" }
 		]
        });
-=======
-
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 
     //------------------------
 
@@ -185,14 +171,9 @@ $(document).ready(function() {
 				<td>
 					<label>Year</label>
 					<select name="year" id="year">
-<<<<<<< HEAD
 						<option value="2018">2018</option>
 						<option value="2019">2019</option>
 						<option value="2020">2020</option>
-=======
-						<option value="2017">2017</option>
-						<option value="2018">2018</option>
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 					</select>
 				</td>
 			</tr>
@@ -202,44 +183,29 @@ $(document).ready(function() {
 	<div style="padding-top: 90;">
 		<label><b>Encoded service</b></label> 
 		<br><br>
-<<<<<<< HEAD
 
 		<!-- I want to loop the service name from table wwhere From database and load form on select value-->
 
-=======
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 		<select name="service" id="service">
 			<option value="OPDNkozi">OPD Nkozi</option>
 			<option value="EDNkozi">ED Nkozi</option>
 			<option value="IPDNkozi">IPD Nkozi</option>
 			<option value="MaternityNkozi">Maternity Nkozi</option>
 			<option value="ImmunizationNkozi">Immunization Nkozi</option>
-			<option value="Labo">Immunization Nkozi</option>
 		</select>
 	</div>
 
-<<<<<<< HEAD
 	<table id="Diagnostics_new" class="display" cellspacing="0" width="400px">
 		<thead>
 			<tr>
 				<th>Diagnostic (New cases)</th>
-=======
-	<table id="Diagnostics" class="display" cellspacing="0" width="100px">
-		<thead>
-			<tr>
-				<th>Diagnostic</th>
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 				<th>Age <5y</th>
 				<th>Age >=5y</th>
 			</tr>
 		</thead>
 		<tfoot>
 			<tr>
-<<<<<<< HEAD
 				<th>Diagnostic (New cases)</th>
-=======
-				<th>Diagnostic</th>
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 				<th>Age <5y</th>
 				<th>Age >=5y</th>
 			</tr>
@@ -270,7 +236,6 @@ $(document).ready(function() {
 
 	<br>
 
-<<<<<<< HEAD
 	<table id="Diagnostics_old" class="display" cellspacing="0" width="400px">
 		<thead>
 			<tr>
@@ -334,8 +299,6 @@ $(document).ready(function() {
 
 	<br>
 
-=======
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 	<table id="TestMalaria" class="display" cellspacing="0" width="400px">
 		<thead>
 			<tr>
@@ -352,26 +315,17 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Number of positives</td>
-<<<<<<< HEAD
 				<td><input type="text" id="r_9_1" name="r_9_1" class="numericInput" value="">
-=======
-				<td><input type="text" id="r_6_3" name="r_6_3" class="numericInput" value="">
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 				</td>
 			</tr>
 			<tr>
 				<td>Number of tests</td>
-<<<<<<< HEAD
 				<td><input type="text" id="r_10_1" name="r_10_1" class="numericInput" value="">
-=======
-				<td><input type="text" id="r_5_3" name="r_5_3" class="numericInput" value="">
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 				</td>
 			</tr>
 		</tbody>
 	</table>
 
-<<<<<<< HEAD
 	<br>
 
 	<table id="HIVTest" class="display" cellspacing="0" width="400px">
@@ -405,6 +359,4 @@ $(document).ready(function() {
 			</tr>
 		</tbody>
 	</table>
-=======
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
 </form>
