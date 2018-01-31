@@ -1,0 +1,18 @@
+
+Without page refresh 
+
+http://talkerscode.com/webtricks/load%20data%20from%20database%20without%20page%20refresh%20using%20ajax%20and%20jquery.php
+
+JASON (JavaScript Object Notation)
+
+object and array
+
+---
+AJAX (Asynchonous JavaScript And XML)
+	XML is a data format similar to JSON
+	JSON has replaced XML
+we shall use AJAJ rather than AJAX. XML
+
+-- 
+Jquery download
+https://jquery.com/download/
