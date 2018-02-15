@@ -85,7 +85,7 @@ $(document).ready(function() {
 		]
  	});
 
-    var table3 = $('#TestMalaria').dataTable({
+ 	var table3 = $('#Referrals').dataTable({
 	    dom: 'rt',
         //"iDisplayLength": 25,
 		columns: [
@@ -94,7 +94,7 @@ $(document).ready(function() {
 		]
        });
 
-    var table4 = $('#HIVTest').dataTable({
+    var table4 = $('#TestMalaria').dataTable({
 	    dom: 'rt',
         //"iDisplayLength": 25,
 		columns: [
@@ -103,15 +103,7 @@ $(document).ready(function() {
 		]
        });
 
-    var table5 = $('#Referrals').dataTable({
-	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
-       });
-
+    
     //------------------------
 
     //-------- Submit button event to call controller and store values

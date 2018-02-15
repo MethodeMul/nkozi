@@ -34,12 +34,8 @@
                 <td>
                     <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
                         <tr>
-<<<<<<< HEAD
-                            <td colspan="2" style="padding-bottom:15px; padding-top:15px;"><strong>Welcome to NKOMIOS, the Medical Information for Operational Support</strong></td>
-=======
-                            <td colspan="2" style="padding-bottom:15px; padding-top:15px;"><strong>Welcome to ELEOS, the MSF Ebola tool for Emergency Operational Support</strong></td>
->>>>>>> 3f1e55e836231485a1241cec18c3e49c4b9a81b8
-                        </tr>
+                            <td colspan="2" style="padding-bottom:15px; padding-top:15px;"><strong>Welcome to NKOMIOS, the NKOZI Medical Information for Operational Support</strong></td>
+                            </tr>
                         <tr>
                             <td colspan="2" align="center" style="padding-bottom:15px"><img src="images/sthetoscope.ico"></td>
                         </tr>
