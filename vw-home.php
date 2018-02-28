@@ -49,7 +49,7 @@
 		
 		if(isset($_GET['opt'])) { //??later dynamically depending on entered service
 			if($_GET['opt'] == 'data') {
-				include ('vw-data_entry_OPD.php');
+				include ('vw-data_entry.php');
 			}
 			elseif($_GET['opt'] == 'report') {
 				echo '<p>Overview of all patients indicators per service </p>';
