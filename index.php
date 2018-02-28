@@ -64,7 +64,7 @@
     include "ctl-db_connection.php";
     if(isset($_POST['Submit'])){
         $myusername = $_POST['myusername'];
-        $mypassword = $_POST['mypassword'];
+        $mypassword = SHA1($_POST['mypassword']);
         $sql = "SELECT * FROM loginuser WHERE username = '".$myusername."' AND password='".$mypassword."'";
         $query = $connection -> query($sql);
         $result = mysqli_num_rows($query);

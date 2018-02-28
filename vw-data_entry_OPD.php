@@ -162,18 +162,26 @@ $(document).ready(function() {
 					<label>Week</label>
 					<select type="text" name="week" id="week">
 						<?php 
-							for($i=1; $i<=52; $i++) {
-								echo '<option value="'.$i.'">'.$i.'</option>';
-							}
+						include_once 'ctl-db_connection.php';
+						$sql = mysqli_query($connection, "SELECT distinct value FROM `when`");
+						for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
+							$row = mysqli_fetch_assoc($sql);
+							echo "<option value=\"". $row['value'] . "\">" . $row['value'] . "</option>";
+						}
 						?>
 					</select>
 				</td>
 				<td>
 					<label>Year</label>
 					<select name="year" id="year">
-						<option value="2018">2018</option>
-						<option value="2019">2019</option>
-						<option value="2020">2020</option>
+						<?php 
+						include_once 'ctl-db_connection.php';
+						$sql = mysqli_query($connection, "SELECT distinct year FROM `when`");
+						for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
+							$row = mysqli_fetch_assoc($sql);
+							echo "<option value=\"". $row['year'] . "\">" . $row['year'] . "</option>";
+						}
+						?>
 					</select>
 				</td>
 			</tr>
@@ -187,11 +195,14 @@ $(document).ready(function() {
 		<!-- I want to loop the service name from table wwhere From database and load form on select value-->
 
 		<select name="service" id="service">
-			<option value="OPDNkozi">OPD Nkozi</option>
-			<option value="EDNkozi">ED Nkozi</option>
-			<option value="IPDNkozi">IPD Nkozi</option>
-			<option value="MaternityNkozi">Maternity Nkozi</option>
-			<option value="ImmunizationNkozi">Immunization Nkozi</option>
+			<?php 
+			include_once 'ctl-db_connection.php';
+			$sql = mysqli_query($connection, "SELECT id, name FROM `where`");
+			for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
+				$row = mysqli_fetch_assoc($sql);
+				echo "<option value=\"". $row['id'] . "\">" . $row['name'] . "</option>";
+			}
+			?>
 		</select>
 	</div>
 
