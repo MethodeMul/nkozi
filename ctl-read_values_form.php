@@ -10,17 +10,15 @@
  	 
  	$CRLF = "\r\n";
  		
- 	file_put_contents("c:\wamp64\logs\methode.log",
+ 	file_put_contents("..\..\logs\methode.log",
  	$CRLF . "------------------ New form read ----------" , FILE_APPEND);
  		
- 	$when = $_GET['year'] . "wk" . $_GET['week'];
- 	$where = $_GET['service'];
-
  	$result = 0;
 
- 	$find_record_query="select value, concat('r_', what, '_', who) from record
- 			where record.when = '".$when."' and record.where = '".$where."'
- 					and value is not null;";
+ 	$find_record_query="select record.value, concat('r_', what, '_', who) from record
+			inner join nkozi.when on record.when = nkozi.when.id
+			where nkozi.when.value = " . $_GET['week'] . " and nkozi.when.year = " . $_GET['year'] . " and record.where = " . $_GET['service'] . "
+			and record.value is not null;";
  	$rst_query=mysqli_query($connection, $find_record_query);
  	if (!$rst_query) {
  		$mysql_error = "Query failed: " . mysqli_error($connection);
@@ -31,7 +29,7 @@
  		$result = 1;
  		$er="Query ok";
  	}
- 	file_put_contents("c:\wamp64\logs\methode.log",
+ 	file_put_contents("..\..\logs\methode.log",
  	$CRLF .$find_record_query, FILE_APPEND);
 
  	$arrRows = array();
