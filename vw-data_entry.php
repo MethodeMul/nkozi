@@ -156,8 +156,11 @@ $(document).ready(function() {
 		</select>
 	</div>
 
-    <?php
+<?php	
+				include ('vw-data_entry_OPD.php');
+				/*	include ('vw-data_entry_ED.php');
 				include ('vw-data_entry_IPD.php');
-	?>
-	
-</form>
+				include ('vw-data_entry_Immunization.php');
+				include ('vw-data_entry_Maternity.php') */
+?>
+

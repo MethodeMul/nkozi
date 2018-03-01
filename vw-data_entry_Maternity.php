@@ -1,69 +1,7 @@
  
 <script type="text/javascript">
 $(document).ready(function() {
-	var $service = $.cookie("service");
-	var $year = $.cookie("year");
-	var $week = $.cookie("week");
 	
-	//------- Load values from DB on page load
-    $.ajax({
-        url: 'ctl-read_values_form.php',
-        async: false,
-        context: document.body,
-        data: { service: $service,
-        	   year: $year,
-        	   week: $week
-        },
-        success: function( datax ) {
-        	var data = JSON.parse(datax);
-    		if(data.result == 1) {
-    			console.log("success");
-    			for (var i = 0; i < data.values.length; i++) {
-    				$('#'+data.values[i][1]).val(data.values[i][0]);
-    				console.log(data.values[i][1] + ' ' + data.values[i][0]);
-    			}
-			}
-			else {
-				console.log("error");
-				console.log(data.msg);
-			}
-    	}
-	});
-    /*$('#r_2_1').bind('mousedown', function(e){
-        alert("papapaaa");
-    });*/
-	$('.numericInput').bind('input', function () {
-		var yourInput = $(this).val();
-		var no_spl_char = yourInput.replace(/[^0-9]/, '');
-		$(this).val(no_spl_char);
-	});
-
-	//----------------------------------
-
-	//------- Cookie management
-	
-	$( "#service" ).change(function() {
-		  //console.log( "New value for select = " + $('#service').val() );
-		$.cookie("service", $('#service').val());
-		var $service = $('#service').val();
-		location.reload();
-	});
-	$( "#year" ).change(function() {
-		$.cookie("year", $('#year').val());
-		var $year = $('#year').val();
-		location.reload();
-	});
-	$( "#week" ).change(function() {
-		$.cookie("week", $('#week').val());
-		var $week = $('#week').val();
-		location.reload();
-	});
-	$('#service').val($.cookie("service"));
-	$('#year').val($.cookie("year"));
-	$('#week').val($.cookie("week"));
-	//---------------------------
-
-
 	//--------- DataTables management
     var table1 = $('#Discharge_diagnostics').dataTable({
 	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
@@ -500,8 +438,4 @@ $(document).ready(function() {
 			</tr>
 		</tbody>
 	</table>
-
-	<br>
-
-
 </form>

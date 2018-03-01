@@ -1,69 +1,7 @@
  
 <script type="text/javascript">
 $(document).ready(function() {
-	var $service = $.cookie("service");
-	var $year = $.cookie("year");
-	var $week = $.cookie("week");
 	
-	//------- Load values from DB on page load
-    $.ajax({
-        url: 'ctl-read_values_form.php',
-        async: false,
-        context: document.body,
-        data: { service: $service,
-        	   year: $year,
-        	   week: $week
-        },
-        success: function( datax ) {
-        	var data = JSON.parse(datax);
-    		if(data.result == 1) {
-    			console.log("success");
-    			for (var i = 0; i < data.values.length; i++) {
-    				$('#'+data.values[i][1]).val(data.values[i][0]);
-    				console.log(data.values[i][1] + ' ' + data.values[i][0]);
-    			}
-			}
-			else {
-				console.log("error");
-				console.log(data.msg);
-			}
-    	}
-	});
-    /*$('#r_2_1').bind('mousedown', function(e){
-        alert("papapaaa");
-    });*/
-	$('.numericInput').bind('input', function () {
-		var yourInput = $(this).val();
-		var no_spl_char = yourInput.replace(/[^0-9]/, '');
-		$(this).val(no_spl_char);
-	});
-
-	//----------------------------------
-
-	//------- Cookie management
-	
-	$( "#service" ).change(function() {
-		  //console.log( "New value for select = " + $('#service').val() );
-		$.cookie("service", $('#service').val());
-		var $service = $('#service').val();
-		location.reload();
-	});
-	$( "#year" ).change(function() {
-		$.cookie("year", $('#year').val());
-		var $year = $('#year').val();
-		location.reload();
-	});
-	$( "#week" ).change(function() {
-		$.cookie("week", $('#week').val());
-		var $week = $('#week').val();
-		location.reload();
-	});
-	$('#service').val($.cookie("service"));
-	$('#year').val($.cookie("year"));
-	$('#week').val($.cookie("week"));
-	//---------------------------
-
-
 	//--------- DataTables management
     var table1 = $('#Diagnostics_new').dataTable({
 	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
@@ -75,17 +13,7 @@ $(document).ready(function() {
 		]
  	});
 
- 	var table2 = $('#Diagnostics_old').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
- 	});
-
-    var table3 = $('#TestMalaria').dataTable({
+ 	var table3 = $('#TestMalaria').dataTable({
 	    dom: 'rt',
         //"iDisplayLength": 25,
 		columns: [
@@ -162,18 +90,26 @@ $(document).ready(function() {
 					<label>Week</label>
 					<select type="text" name="week" id="week">
 						<?php 
-							for($i=1; $i<=52; $i++) {
-								echo '<option value="'.$i.'">'.$i.'</option>';
-							}
+						include_once 'ctl-db_connection.php';
+						$sql = mysqli_query($connection, "SELECT distinct value FROM `when`");
+						for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
+							$row = mysqli_fetch_assoc($sql);
+							echo "<option value=\"". $row['value'] . "\">" . $row['value'] . "</option>";
+						}
 						?>
 					</select>
 				</td>
 				<td>
 					<label>Year</label>
 					<select name="year" id="year">
-						<option value="2018">2018</option>
-						<option value="2019">2019</option>
-						<option value="2020">2020</option>
+						<?php 
+						include_once 'ctl-db_connection.php';
+						$sql = mysqli_query($connection, "SELECT distinct year FROM `when`");
+						for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
+							$row = mysqli_fetch_assoc($sql);
+							echo "<option value=\"". $row['year'] . "\">" . $row['year'] . "</option>";
+						}
+						?>
 					</select>
 				</td>
 			</tr>
@@ -187,11 +123,14 @@ $(document).ready(function() {
 		<!-- I want to loop the service name from table wwhere From database and load form on select value-->
 
 		<select name="service" id="service">
-			<option value="OPDNkozi">OPD Nkozi</option>
-			<option value="EDNkozi">ED Nkozi</option>
-			<option value="IPDNkozi">IPD Nkozi</option>
-			<option value="MaternityNkozi">Maternity Nkozi</option>
-			<option value="ImmunizationNkozi">Immunization Nkozi</option>
+			<?php 
+			include_once 'ctl-db_connection.php';
+			$sql = mysqli_query($connection, "SELECT id, name FROM `where`");
+			for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
+				$row = mysqli_fetch_assoc($sql);
+				echo "<option value=\"". $row['id'] . "\">" . $row['name'] . "</option>";
+			}
+			?>
 		</select>
 	</div>
 
@@ -233,40 +172,6 @@ $(document).ready(function() {
 			</tr>
 		</tbody>
 	</table>
-
-	<br>
-
-	<table id="Diagnostics_old" class="display" cellspacing="0" width="400px">
-		<thead>
-			<tr>
-				<th>Diagnostic (Old cases)</th>
-				<th>Age <5y</th>
-				<th>Age >=5y</th>
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>
-				<th>Diagnostic (Old cases)</th>
-				<th>Age <5y</th>
-				<th>Age >=5y</th>
-			</tr>
-		</tfoot>
-		<tbody>
-			<tr>  
-				<td>Diabetis</td>
-				<td><input type="text" id="r_5_1" name="r_5_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_5_2" name="r_5_2" class="numericInput" value=""></td>
-			</tr>
-			<tr>
-				<td>Asthma</td>
-				<td><input type="text" id="r_6_1" name="r_6_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_6_2" name="r_6_2" class="numericInput" value=""></td>
-			</tr>
-			
-		</tbody>
-	</table>
-
-	<br>
 
 	<br>
 
