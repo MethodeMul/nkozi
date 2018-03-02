@@ -98,7 +98,6 @@ $(document).ready(function() {
 
 <div id="er"><?php if(isset($er) && $er != '') echo $er; else echo '<div id="er_bl">Have a good encoding day</div>'; ?></div>
 
-
 <form method="post" enctype="multipart/form-data">
 
 	<input type="submit" name="submit" id='submit'
@@ -161,6 +160,8 @@ $(document).ready(function() {
 				/*	include ('vw-data_entry_ED.php');
 				include ('vw-data_entry_IPD.php');
 				include ('vw-data_entry_Immunization.php');
-				include ('vw-data_entry_Maternity.php') */
+				include ('vw-data_entry_Maternity.php');
+				include ('vw-contact.php')
+				 */
 ?>
 

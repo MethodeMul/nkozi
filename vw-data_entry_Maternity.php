@@ -113,50 +113,6 @@ $(document).ready(function() {
 } );
 </script>
 
-<div id="er"><?php if(isset($er) && $er != '') echo $er; else echo '<div id="er_bl">Have a good encoding day</div>'; ?></div>
-
-
-<form method="post" enctype="multipart/form-data">
-
-	<input type="submit" name="submit" id='submit'
-		value="Submit encoded values" class="submit">
-
-	<div style="padding-top: 30px;">
-		<label><b>Encoded week and year</b></label>
-		<table style="padding-top: 15px;">
-			<tr>
-				<td>
-					<label>Week</label>
-					<select type="text" name="week" id="week">
-						<?php 
-							for($i=1; $i<=52; $i++) {
-								echo '<option value="'.$i.'">'.$i.'</option>';
-							}
-						?>
-					</select>
-				</td>
-				<td>
-					<label>Year</label>
-					<select name="year" id="year">
-						<option value="2018">2018</option>
-						<option value="2019">2019</option>
-						<option value="2020">2020</option>
-					</select>
-				</td>
-			</tr>
-		</table>
-	</div>
-	
-	<div style="padding-top: 90;">
-		<label><b>Encoded service</b></label> 
-		<br><br>
-
-		<!-- I want to loop the service name from table wwhere From database and load form on select value-->
-
-		<select name="service" id="service">
-			<option value="MaternityNkozi">Maternity Nkozi</option>
-		</select>
-	</div>
 
 	<table id="Equipments" class="display" cellspacing="0" width="400px">
 		<thead>

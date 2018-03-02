@@ -74,65 +74,6 @@ $(document).ready(function() {
 } );
 </script>
 
-<div id="er"><?php if(isset($er) && $er != '') echo $er; else echo '<div id="er_bl">Have a good encoding day</div>'; ?></div>
-
-
-<form method="post" enctype="multipart/form-data">
-
-	<input type="submit" name="submit" id='submit'
-		value="Submit encoded values" class="submit">
-
-	<div style="padding-top: 30px;">
-		<label><b>Encoded week and year</b></label>
-		<table style="padding-top: 15px;">
-			<tr>
-				<td>
-					<label>Week</label>
-					<select type="text" name="week" id="week">
-						<?php 
-						include_once 'ctl-db_connection.php';
-						$sql = mysqli_query($connection, "SELECT distinct value FROM `when`");
-						for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
-							$row = mysqli_fetch_assoc($sql);
-							echo "<option value=\"". $row['value'] . "\">" . $row['value'] . "</option>";
-						}
-						?>
-					</select>
-				</td>
-				<td>
-					<label>Year</label>
-					<select name="year" id="year">
-						<?php 
-						include_once 'ctl-db_connection.php';
-						$sql = mysqli_query($connection, "SELECT distinct year FROM `when`");
-						for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
-							$row = mysqli_fetch_assoc($sql);
-							echo "<option value=\"". $row['year'] . "\">" . $row['year'] . "</option>";
-						}
-						?>
-					</select>
-				</td>
-			</tr>
-		</table>
-	</div>
-	
-	<div style="padding-top: 90;">
-		<label><b>Encoded service</b></label> 
-		<br><br>
-
-		<!-- I want to loop the service name from table wwhere From database and load form on select value-->
-
-		<select name="service" id="service">
-			<?php 
-			include_once 'ctl-db_connection.php';
-			$sql = mysqli_query($connection, "SELECT id, name FROM `where`");
-			for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
-				$row = mysqli_fetch_assoc($sql);
-				echo "<option value=\"". $row['id'] . "\">" . $row['name'] . "</option>";
-			}
-			?>
-		</select>
-	</div>
 
 	<table id="Diagnostics_new" class="display" cellspacing="0" width="400px">
 		<thead>

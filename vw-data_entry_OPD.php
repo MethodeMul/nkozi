@@ -84,7 +84,6 @@ $(document).ready(function() {
 } );
 </script>
 
-
 	<table id="Diagnostics_new" class="display" cellspacing="0" width="400px">
 		<thead>
 			<tr>
