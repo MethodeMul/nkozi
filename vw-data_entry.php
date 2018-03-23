@@ -42,56 +42,51 @@ $(document).ready(function() {
 
 	//------- Cookie management
 	
-	$( "#service" ).change(function() {
+	
 		  //console.log( "New value for select = " + $('#service').val() );
-		$.cookie("service", $('#service').val());
-		var $service = $('#service').val();
-		location.reload();
-	});
+
+		  var $service = $.cookie("service");
+
+		  $("#service").change(function() {
+
+				$.cookie("service", $('#service').val());
+				var $service = $('#service').val();
+				
+			switch($service) {
+			case 'OPD Nkozi':
+				window.location="vw-data_entry_OPD.php";
+			break;
+			case 'IPD Nkozi':
+				window.location="vw-data_entry_IPD.php";
+			break;
+			/*case 'Immunization':
+				window.location="vw-data_entry_Immunization.php";
+			break;	*/
+			case 'Mat Nkozi':
+				window.location="vw-data_entry_Maternity.php";
+			break;				
+			};
+			$('#service').val($.cookie("service"));
+			//location.reload();
+	});													
+
+
 	$( "#year" ).change(function() {
 		$.cookie("year", $('#year').val());
 		var $year = $('#year').val();
 		location.reload();
 	});
+
 	$( "#week" ).change(function() {
 		$.cookie("week", $('#week').val());
 		var $week = $('#week').val();
 		location.reload();
 	});
+
 	$('#service').val($.cookie("service"));
 	$('#year').val($.cookie("year"));
 	$('#week').val($.cookie("week"));
 	//---------------------------
-
-
-    //-------- Submit button event to call controller and store values
-	$('.submit').click(function(event) {
-		//e.preventDefault();
-		var $form = $(this).closest('form'); // get the form element this button belongs to
-		
-	    jQuery.post( 'ctl-write_values_form.php', $form.serialize(),
-	    	    function( data ) {
-    	    		alert("Values encoded successfully");
-    	    		console.log("Values encoded");
-    	            $('#er').html("lolo");
-    	            $('#er').val("papaaa");
-	    	        var data = eval( '('+dataStr+')' );
-	    	        if(data.result == 1) {
-	    	        	console.log("success---");
-	    	            $('#er').html(data.msg);
-	    	            $('#er').val("papaaa");
-	    	            console.log(data.msg);
-	    	            
-	    	        }
-	    	        else {
-	    	        	console.log(data.msg);				        
-	    	        	$('#er').html(data.msg);
-	    	        }
-	   	});
-	   	
-	});
-
-	//--------------------------------
 
 } );
 </script>
@@ -136,12 +131,12 @@ $(document).ready(function() {
 			</tr>
 		</table>
 	</div>
-	
+
 	<div style="padding-top: 90;">
 		<label><b>Encoded service</b></label> 
 		<br><br>
 
-		<!-- I want to loop the service name from table wwhere From database and load form on select value-->
+		<!--loop the service name from table wwhere From database and load form on select value -->
 
 		<select name="service" id="service">
 			<?php 
@@ -155,13 +150,14 @@ $(document).ready(function() {
 		</select>
 	</div>
 
+<!--
+<form>
+  <select name="service" id="service">
+    <option value="OPD" selected="selected">OPD</option>
+    <option value="IPD">IPD</option>
+  </select>
+</form>
+-->
 <?php	
-				include ('vw-data_entry_OPD.php');
-				/*	include ('vw-data_entry_ED.php');
-				include ('vw-data_entry_IPD.php');
-				include ('vw-data_entry_Immunization.php');
-				include ('vw-data_entry_Maternity.php');
-				include ('vw-contact.php')
-				 */
+		include ('vw-data_entry_OPD.php');
 ?>
-
