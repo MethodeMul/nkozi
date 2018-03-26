@@ -51,19 +51,22 @@ $(document).ready(function() {
 
 				$.cookie("service", $('#service').val());
 				var $service = $('#service').val();
-				
+			console.log('The value I am trying to see in the switch = ' + $service);
 			switch($service) {
-			case 'OPD Nkozi':
-				window.location="vw-data_entry_OPD.php";
+			case 1:
+				window.location="vw-home.php?opt=data-OPD";
 			break;
-			case 'IPD Nkozi':
-				window.location="vw-data_entry_IPD.php";
+			case 3:
+				window.location="vw-home.php?opt=data-ED";
+			break;
+			case 3:
+				window.location="vw-home.php?opt=data-IPD";
 			break;
 			/*case 'Immunization':
 				window.location="vw-data_entry_Immunization.php";
 			break;	*/
-			case 'Mat Nkozi':
-				window.location="vw-data_entry_Maternity.php";
+			case 4:
+				window.location="vw-home.php?opt=data&srvtype=MAT";
 			break;				
 			};
 			$('#service').val($.cookie("service"));
@@ -158,6 +161,3 @@ $(document).ready(function() {
   </select>
 </form>
 -->
-<?php	
-		include ('vw-data_entry_OPD.php');
-?>

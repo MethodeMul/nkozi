@@ -50,17 +50,22 @@
 		if(isset($_GET['opt'])) { //??later dynamically depending on entered service
 			if($_GET['opt'] == 'data') {
 				include ('vw-data_entry.php');
+				include ('vw-data_entry_OPD.php');
 			}
 			elseif($_GET['opt'] == 'data-OPD') {
-				include ('vw-data_entry_OPD.php');		
+				include ('vw-data_entry.php');
+				include ('vw-data_entry_OPD.php');	
 			}
 			elseif($_GET['opt'] == 'data-IPD') {
+				include ('vw-data_entry.php');
 				include ('vw-data_entry_IPD.php');		
 			}
 			elseif($_GET['opt'] == 'data-MAT') {
+				include ('vw-data_entry.php');
 				include ('vw-data_entry_Maternity.php');		
 			}
 			elseif($_GET['opt'] == 'data-IMM') {
+				include ('vw-data_entry.php');
 				include ('vw-data_entry_Immunization.php');		
 			}
 			elseif($_GET['opt'] == 'report') {
