@@ -5,56 +5,26 @@ $(document).ready(function() {
 	
 	//--------- DataTables management
     var table1 = $('#Diagnostics_new').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "100px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
+	    dom: 'rt' //'T<"clear">lrtip' //Don't display Search bar and show entries
  	});
 
  	var table2 = $('#Diagnostics_old').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
+	    dom: 'rt' //'T<"clear">lrtip' //Don't display Search bar and show entries
  	});
 
     var table3 = $('#TestMalaria').dataTable({
-	    dom: 'rt',
+	    dom: 'rt'
         //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
        });
 
     var table4 = $('#HIVTest').dataTable({
-	    dom: 'rt',
+	    dom: 'rt'
         //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
        });
 
     var table5 = $('#Referrals').dataTable({
-	    dom: 'rt',
+	    dom: 'rt'
         //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
        });
 
     //------------------------

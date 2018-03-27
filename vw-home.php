@@ -64,9 +64,9 @@
 				include ('vw-data_entry.php');
 				include ('vw-data_entry_Maternity.php');		
 			}
-			elseif($_GET['opt'] == 'data-IMM') {
+			elseif($_GET['opt'] == 'data-ED') {
 				include ('vw-data_entry.php');
-				include ('vw-data_entry_Immunization.php');		
+				include ('vw-data_entry_ED.php');		
 			}
 			elseif($_GET['opt'] == 'report') {
 				echo '<p>Overview of all patients indicators per service </p>';

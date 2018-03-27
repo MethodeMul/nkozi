@@ -53,23 +53,24 @@ $(document).ready(function() {
 				var $service = $('#service').val();
 			console.log('The value I am trying to see in the switch = ' + $service);
 			switch($service) {
-			case 1:
-				window.location="vw-home.php?opt=data-OPD";
+			case '1':
+				window.location.href="vw-home.php?opt=data-OPD";
 			break;
-			case 3:
-				window.location="vw-home.php?opt=data-ED";
+			case '2':
+				window.location.href="vw-home.php?opt=data-ED";
 			break;
-			case 3:
-				window.location="vw-home.php?opt=data-IPD";
+			case '3':
+				window.location.href="vw-home.php?opt=data-IPD";
 			break;
 			/*case 'Immunization':
 				window.location="vw-data_entry_Immunization.php";
 			break;	*/
-			case 4:
-				window.location="vw-home.php?opt=data&srvtype=MAT";
+			case '4':
+				window.location.href="vw-home.php?opt=data-MAT";
 			break;				
 			};
 			$('#service').val($.cookie("service"));
+			//window.location.reload();
 			//location.reload();
 	});													
 
