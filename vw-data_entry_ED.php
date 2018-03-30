@@ -5,49 +5,17 @@ $(document).ready(function() {
 	//--------- DataTables management
     var table1 = $('#Diagnostics_new').dataTable({
 	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
  	});
 
- 	var table2 = $('#Diagnostics_old').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
- 	});
-
- 	var table3 = $('#Referrals').dataTable({
+ 	var table2 = $('#Referrals').dataTable({
 	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
        });
 
-    var table4 = $('#TestMalaria').dataTable({
+    var table3 = $('#TestMalaria').dataTable({
 	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
        });
 
-} );
+});
 </script>
 
 		<table id="Diagnostics_new" class="display" cellspacing="0" width="400px">
@@ -187,6 +155,8 @@ $(document).ready(function() {
 	</table>
 
 	<br>
+<!------ TO BE TAKEN INTO THE LAB FORM -->
+
 
 	<table id="TestMalaria" class="display" cellspacing="0" width="400px">
 		<thead>

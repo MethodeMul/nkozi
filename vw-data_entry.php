@@ -62,16 +62,20 @@ $(document).ready(function() {
 			case '3':
 				window.location.href="vw-home.php?opt=data-IPD";
 			break;
-			/*case 'Immunization':
-				window.location="vw-data_entry_Immunization.php";
-			break;	*/
+			case '5':
+				window.location.href="vw-home.php?opt=data-IMM";
+			break;	
 			case '4':
 				window.location.href="vw-home.php?opt=data-MAT";
-			break;				
+			break;	
+			case '6':
+				window.location.href="vw-home.php?opt=data-LAB";
+			break;		
+			case '7':
+				window.location.href="vw-home.php?opt=data-ANC_PNC_FP";
+			break;			
 			};
 			$('#service').val($.cookie("service"));
-			//window.location.reload();
-			//location.reload();
 	});													
 
 
@@ -154,11 +158,3 @@ $(document).ready(function() {
 		</select>
 	</div>
 
-<!--
-<form>
-  <select name="service" id="service">
-    <option value="OPD" selected="selected">OPD</option>
-    <option value="IPD">IPD</option>
-  </select>
-</form>
--->

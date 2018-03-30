@@ -3,73 +3,32 @@
 $(document).ready(function() {
 	
 	//--------- DataTables management
-    var table1 = $('#Diagnostics_new').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
- 	});
 
- 	var table2 = $('#Diagnostics_old').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
+ 	var table2 = $('#Diagnostics_exit').dataTable({
+	    dom: 'rt', 
  	});
 
     var table3 = $('#TestMalaria').dataTable({
 	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
+		
        });
 
     var table4 = $('#HIVTest').dataTable({
 	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
+		
        });
 
     var table5 = $('#Referrals').dataTable({
 	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
+		
        });
 	var table6 = $('#Census').dataTable({
 	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
+		
        });
 	var table7 = $('#Discharges').dataTable({
 	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
+		
        });
 
     //------------------------
@@ -82,13 +41,13 @@ $(document).ready(function() {
 		<thead>
 			<tr>
 				<th>Census</th>
-				<th>Total</th>
+				<th>Number</th>
 			</tr>
 		</thead>
 		<tfoot>
 			<tr>
 				<th>Census</th>
-				<th>Total</th>
+				<th>Number</th>
 			</tr>
 		</tfoot>
 		<tbody>
@@ -255,7 +214,7 @@ $(document).ready(function() {
 
 	<br><br>
 
-	<table id="Referrals" class="display" cellspacing="0" width="400px">
+	<table id="Referrals" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Referrals</th>
@@ -284,7 +243,7 @@ $(document).ready(function() {
 
 	<br>
 
-	<table id="TestMalaria" class="display" cellspacing="0" width="400px">
+	<table id="TestMalaria" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Test Malaria</th>
@@ -313,7 +272,7 @@ $(document).ready(function() {
 
 	<br>
 
-	<table id="HIVTest" class="display" cellspacing="0" width="400px">
+	<table id="HIVTest" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>HIV Test</th>

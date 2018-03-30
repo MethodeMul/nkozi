@@ -4,101 +4,49 @@ $(document).ready(function() {
 	
 	//--------- DataTables management
     var table1  = $('#Equipments').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" }
-		]
+	    dom: 'rt',
  	});
    var table2 = $('#Admissions').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" }
-		]
+	    dom: 'rt',
  	});
 
    var table3 = $('#Discharges').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" }
-		]
+	    dom: 'rt',
  	});
 
  	var table4= $('#Discharge_diagnostics').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "20px" },
-			{ "width": "20px" },
-			{ "width": "20px" },
-			{ "width": "20px" },
-			{ "width": "20px" },
-			{ "width": "20px" }
-		]
+	    dom: 'rt',
  	});
 
     var table5 = $('#TestMlaria').dataTable({
 	    dom: 'rt',
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "70px" },
-			{ "width": "30px" }
-		]
        });
 
  	var table6 = $('#HIVTest').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" }
-		]
+	    dom: 'rt',
  	});
 
  	var table7 = $('#Delivery_room').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" }
-		]
+	    dom: 'rt',
  	});
 
- 	var table8 = $('#procedures').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
+ 	var table8 = $('#Procedures').dataTable({
+	    dom: 'rt',
  	});
 
  	var table9 = $('#utilization_of_serv').dataTable({
-	    dom: 'rt', //'T<"clear">lrtip' //Don't display Search bar and show entries
-        //"iDisplayLength": 25,
-		columns: [
-			{ "width": "40px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" },
-			{ "width": "30px" }
-		]
+	    dom: 'rt',
+ 	});
+
+ 	var table10 = $('#TestMalaria').dataTable({
+	    dom: 'rt',
  	});
  
 } );
 
 </script>
 
-	<table id="Equipments" class="display" cellspacing="0" width="400px">
+	<table id="Equipments" class="display" cellspacing="0" width="400px" >
 		<thead>
 			<tr>
 				<th>Equipments</th>
@@ -116,7 +64,7 @@ $(document).ready(function() {
 
 	<br>
 
-	<table id="Admissions" class="display" cellspacing="0" width="400px">
+	<table id="Admissions" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Admissions</th>
@@ -151,7 +99,7 @@ $(document).ready(function() {
 
 	<br>
 
-	<table id="Discharges" class="display" cellspacing="0" width="400px">
+	<table id="Discharges" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Maternity discharges</th>
@@ -190,7 +138,7 @@ $(document).ready(function() {
 
 	<br>
 
-	<table id="Discharge_diagnostics" class="display" cellspacing="0" width="400px">
+	<table id="Discharge_diagnostics" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<tr>
@@ -336,7 +284,7 @@ $(document).ready(function() {
 	
 	<br>
 
-	<table id="TestMalaria" class="display" cellspacing="0" width="400px">
+	<table id="TestMalaria" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Test Malaria</th>
@@ -365,7 +313,7 @@ $(document).ready(function() {
 
 	<br>
 
-	<table id="HIVTest" class="display" cellspacing="0" width="400px">
+	<table id="HIVTest" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Womem tested for HIV in labour</th>
@@ -455,7 +403,7 @@ $(document).ready(function() {
 
 	<br>
 
-	<table id="Delivery_room" class="display" cellspacing="0" width="400px">
+	<table id="Delivery_room" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Delivery room</th>
@@ -512,7 +460,7 @@ $(document).ready(function() {
 		</tbody>
 	</table>
 	<br>
-	<table id="Procedures" class="display" cellspacing="0" width="400px">
+	<table id="Procedures" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Procedures</th>
@@ -550,7 +498,7 @@ $(document).ready(function() {
 	</table>
 
 	<br>
-	<table id="utilization_of_serv" class="display" cellspacing="0" width="400px">
+	<table id="utilization_of_serv" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Blood transfustion</th>
@@ -585,7 +533,7 @@ $(document).ready(function() {
 			</tr>
 			<tr>
 				<td>Other procedures</td>
-				td><input type="text" id="r_46_1" name="r_46_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_46_1" name="r_46_1" class="numericInput" value=""></td>
 				<td><input type="text" id="r_46_2" name="r_46_2" class="numericInput" value=""></td>
 				<td><input type="text" id="r_46_3" name="r_46_3" class="numericInput" value=""></td>
 				<td><input type="text" id="r_46_4" name="r_46_4" class="numericInput" value=""></td>

@@ -68,6 +68,18 @@
 				include ('vw-data_entry.php');
 				include ('vw-data_entry_ED.php');		
 			}
+			elseif($_GET['opt'] == 'data-IMM') {
+				include ('vw-data_entry.php');
+				include ('vw-data_entry_Immunization.php');		
+			}
+			elseif($_GET['opt'] == 'data-LAB') {
+				include ('vw-data_entry.php');
+				include ('vw-data_entry_Laboratory.php');		
+			}
+			elseif($_GET['opt'] == 'data-ANC_PNC_FP') {
+				include ('vw-data_entry.php');
+				include ('vw-data_entry_ANC_PNC_FP.php');		
+			}
 			elseif($_GET['opt'] == 'report') {
 				echo '<p>Overview of all patients indicators per service </p>';
 				echo '<br>';
