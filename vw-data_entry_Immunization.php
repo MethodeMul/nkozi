@@ -181,6 +181,7 @@ $(document).ready(function() {
 
 		<tfoot>
 			<tr align = center>
+				<th>Category</th>
 				<th>Male</th>
 				<th>Female</th>
 			</tr>

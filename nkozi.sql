@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2018 at 10:47 AM
+-- Generation Time: Mar 31, 2018 at 09:36 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -19,6 +19,44 @@ SET time_zone = "+00:00";
 --
 -- Database: `nkozi`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `age`
+--
+
+CREATE TABLE `age` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `code` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `upd_time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `age`
+--
+
+INSERT INTO `age` (`id`, `name`, `code`, `upd_time`) VALUES
+(1, '0-28 days', '0-28d', '2018-03-23 11:10:00'),
+(2, '29 days - 4 years', '29d-4y', '2018-03-23 11:10:00'),
+(3, '5-59 years', '5-59y', '2018-03-23 11:16:09'),
+(4, '60 years & above', '>=60y', '2018-03-23 11:16:06'),
+(5, 'Under five years', '<5y', '2018-03-23 10:26:00'),
+(6, 'Five years and above', '>=5y', '2018-03-23 11:17:06'),
+(7, '10-19 years', '10-19 y', '2018-03-23 11:17:09'),
+(8, '20-24 years', '20-24y', '2018-03-23 11:17:03'),
+(9, '>=25 years', '>=25 y', '2018-03-23 11:17:01'),
+(10, '9 years', '9y', '2018-03-23 11:17:05'),
+(11, '10 years', '10y', '2018-03-23 11:17:08'),
+(12, '11 years', '11y', '2018-03-23 11:19:01'),
+(13, '12 years', '12y', '2018-03-23 11:20:01'),
+(14, '13 years', '13y', '2018-03-23 11:20:01'),
+(15, '14 years', '14y', '2018-03-23 11:20:01'),
+(16, '9-14 years', '9-14y', '2018-03-23 11:20:01'),
+(17, '15+ years', '>=15y', '2018-03-23 11:20:01'),
+(18, 'Under 1', '<1y', '2018-03-23 11:20:01'),
+(19, '1-4 years', '1-4y', '2018-03-23 11:20:01');
 
 -- --------------------------------------------------------
 
@@ -88,6 +126,19 @@ INSERT INTO `concept_dic` (`id`, `type`, `code`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `death`
+--
+
+CREATE TABLE `death` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `code` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `upd_time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `loginuser`
 --
 
@@ -103,7 +154,7 @@ CREATE TABLE `loginuser` (
 --
 
 INSERT INTO `loginuser` (`id`, `username`, `password`, `creation_date`) VALUES
-(12, 'user', 'user', '2018-01-08 01:35:00');
+(12, 'user', '12dea96fec20593566ab75692c9949596833adc9', '2018-01-12 18:35:00');
 
 -- --------------------------------------------------------
 
@@ -126,140 +177,127 @@ CREATE TABLE `record` (
 --
 
 INSERT INTO `record` (`id`, `value`, `what`, `who`, `when`, `where`, `upd_date`) VALUES
-(223, 1, 2, 1, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(224, 1, 2, 2, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(225, 1, 1, 1, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(226, 1, 1, 2, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(227, 1, 3, 1, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(228, 1, 3, 2, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(229, 1, 4, 1, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(230, 1, 4, 2, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(231, 1, 6, 3, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(232, 1, 5, 3, '2018wk9', 'OPDNkozi', '2018-01-26 16:41:13'),
-(233, 23, 2, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:21'),
-(234, 12, 2, 2, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:22'),
-(235, 12, 1, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:22'),
-(236, 2, 1, 2, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:22'),
-(237, 1, 3, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:22'),
-(238, 2, 3, 2, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:22'),
-(239, 2, 4, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:22'),
-(240, 2, 4, 2, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:23'),
-(241, 2, 6, 3, '2018wk1', 'OPDNkozi', '2018-01-26 16:42:05'),
-(242, 2, 5, 3, '2018wk1', 'OPDNkozi', '2018-01-26 16:42:05'),
-(243, 12, 2, 1, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:57'),
-(244, 32, 2, 2, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:57'),
-(245, 84, 1, 1, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:57'),
-(246, 84, 1, 2, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:57'),
-(247, 89, 3, 1, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:57'),
-(248, 32, 3, 2, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:58'),
-(249, 56, 4, 1, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:58'),
-(250, 45, 4, 2, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:58'),
-(251, 78, 6, 3, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:58'),
-(252, 65, 5, 3, '2018wk2', 'OPDNkozi', '2018-01-26 18:06:58'),
-(253, 3, 2, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(254, 3, 2, 2, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(255, 3, 1, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(256, 3, 1, 2, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(257, 3, 3, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(258, 3, 3, 2, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(259, 3, 4, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(260, 3, 4, 2, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(261, 3, 11, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(262, 3, 11, 2, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:07'),
-(263, 3, 10, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:08'),
-(264, 3, 10, 2, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:08'),
-(265, 3, 6, 3, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:08'),
-(266, 3, 5, 3, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:08'),
-(267, 3, 7, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:08'),
-(268, 3, 9, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:08'),
-(269, 3, 8, 1, '2018wk3', 'OPDNkozi', '2018-01-26 18:57:08'),
-(270, 4, 6, 3, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(271, 5, 5, 3, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(272, 4, 7, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(273, 5, 9, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(274, 4, 8, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(275, 14, 2, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:39'),
-(276, 1, 2, 2, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:39'),
-(277, 14, 1, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:39'),
-(278, 14, 1, 2, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(279, 14, 3, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(280, 14, 3, 2, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(281, 14, 4, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(282, 14, 4, 2, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(283, 141, 11, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(284, 14, 11, 2, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(285, 1, 10, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(286, 1, 10, 2, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(287, 1, 12, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(288, 1, 13, 1, '2018wk4', 'OPDNkozi', '2018-01-29 14:01:40'),
-(289, 13, 2, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(290, 1, 2, 2, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(291, 1, 1, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(292, 1, 1, 2, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(293, 1, 3, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(294, 1, 3, 2, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(295, 13, 4, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(296, 31, 4, 2, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(297, 32, 11, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(298, 12, 11, 2, '2018wk4', 'MaternityNkozi', '2018-01-29 14:03:56'),
-(299, 2, 10, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(300, 23, 10, 2, '2018wk4', 'MaternityNkozi', '2018-01-29 14:03:56'),
-(301, 12, 12, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(302, 42, 13, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(303, 23, 6, 3, '2018wk4', 'MaternityNkozi', '2018-01-29 14:03:56'),
-(304, 67, 5, 3, '2018wk4', 'MaternityNkozi', '2018-01-29 14:03:56'),
-(305, 1, 7, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(306, 12, 9, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(307, 13, 8, 1, '2018wk4', 'MaternityNkozi', '2018-01-29 15:49:24'),
-(308, 1, 2, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:05'),
-(309, 1, 2, 2, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(310, 1, 1, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(311, 1, 1, 2, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(312, 6, 3, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(313, 7, 3, 2, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(314, 8, 4, 2, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(315, 8, 6, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(316, 8, 6, 2, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(317, 8, 5, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(318, 8, 5, 2, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(319, 8, 7, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(320, 8, 8, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(321, 8, 9, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(322, 8, 10, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(323, 8, 11, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(324, 8, 13, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:07'),
-(325, 8, 12, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:07'),
-(326, 2, 4, 1, '2018wk6', 'OPDNkozi', '2018-01-31 05:36:06'),
-(327, 2, 6, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:23'),
-(328, 3, 6, 2, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:23'),
-(329, 3, 5, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:23'),
-(330, 5, 5, 2, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:24'),
-(331, 34, 7, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:24'),
-(332, 46, 8, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:24'),
-(333, 1, 2, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(334, 2, 2, 2, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(335, 24, 1, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(336, 787, 1, 2, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(337, 45, 3, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(338, 5, 3, 2, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(339, 8, 4, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(340, 8, 4, 2, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(341, 7, 6, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(342, 7, 6, 2, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(343, 7, 5, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(344, 7, 5, 2, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:41'),
-(345, 5, 7, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:42'),
-(346, 6, 8, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:42'),
-(347, 45, 9, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:42'),
-(348, 44, 10, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:42'),
-(349, 4, 13, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:42'),
-(350, NULL, 11, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:42'),
-(351, NULL, 12, 1, '2018wk5', 'OPDNkozi', '2018-02-05 10:27:42'),
-(352, 1, 9, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:25'),
-(353, 1, 10, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:25'),
-(354, 1, 11, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:25'),
-(355, 1, 13, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:26'),
-(356, 1, 12, 1, '2018wk1', 'OPDNkozi', '2018-02-06 21:03:26');
+(216, 2, 2, 1, '2018wk1', '1', '2018-02-28 14:13:56'),
+(217, 2, 2, 2, '2018wk1', '1', '2018-02-28 14:13:56'),
+(218, 45, 1, 1, '2018wk1', '1', '2018-02-28 14:13:56'),
+(219, 21, 3, 1, '2018wk1', '1', '2018-02-28 14:13:56'),
+(220, 21, 3, 2, '2018wk1', '1', '2018-02-28 14:13:56'),
+(221, 21, 6, 3, '2018wk1', '1', '2018-01-11 03:55:21'),
+(222, 21, 5, 3, '2018wk1', '1', '2018-01-11 03:55:22'),
+(223, 11, 2, 1, '2018wk2', '1', '2018-01-12 03:40:36'),
+(224, 11, 2, 2, '2018wk2', '1', '2018-01-12 03:40:37'),
+(225, 1, 1, 1, '2018wk2', '1', '2018-01-12 03:40:37'),
+(226, 1, 1, 2, '2018wk2', '1', '2018-01-12 03:40:37'),
+(227, 1, 3, 1, '2018wk2', '1', '2018-01-12 03:40:37'),
+(228, 1, 3, 2, '2018wk2', '1', '2018-01-12 03:40:38'),
+(229, 1, 4, 1, '2018wk2', '1', '2018-01-12 03:40:38'),
+(230, 1, 4, 2, '2018wk2', '1', '2018-01-12 03:40:38'),
+(231, 1, 6, 3, '2018wk2', '1', '2018-01-12 03:40:38'),
+(232, 1, 5, 3, '2018wk2', '1', '2018-01-12 03:40:38'),
+(234, 2, 2, 2, '2018wk2', '1', '2018-01-12 08:35:03'),
+(235, 65, 2, 1, '2018wk3', '1', '2018-03-03 23:13:42'),
+(236, 615, 2, 2, '2018wk3', '1', '2018-03-03 23:13:42'),
+(237, 61, 1, 1, '2018wk3', '1', '2018-03-03 23:13:42'),
+(238, 212, 3, 1, '2018wk3', '1', '2018-03-03 23:13:42'),
+(239, 65, 2, 1, '2018wk3', '1', '2018-01-12 09:37:00'),
+(240, 615, 2, 2, '2018wk2', '1', '2018-01-12 09:37:00'),
+(241, 61, 1, 1, '2018wk2', '1', '2018-01-12 09:37:00'),
+(242, 212, 3, 1, '2018wk2', '1', '2018-01-12 09:37:00'),
+(243, 14, 2, 1, '2018wk3', '1', '2018-01-12 10:00:59'),
+(244, 14, 4, 2, '2018wk4', '1', '2018-01-12 10:01:00'),
+(245, 12, 1, 1, '2018wk4', '1', '2018-01-12 10:00:59'),
+(246, 1, 2, 1, '2018wk4', '1', '2018-01-12 13:09:28'),
+(247, 1, 2, 2, '2018wk4', '1', '2018-01-12 13:09:28'),
+(248, 1, 4, 1, '2018wk4', '1', '2018-01-12 13:09:29'),
+(249, 12, 2, 1, '2018wk4', '1', '2018-01-12 16:13:05'),
+(250, 21, 2, 2, '2018wk4', '1', '2018-01-12 16:13:05'),
+(251, 656, 1, 1, '2018wk4', '1', '2018-01-12 16:13:05'),
+(252, 8, 1, 2, '2018wk4', '1', '2018-01-12 16:13:05'),
+(253, 8, 3, 1, '2018wk4', '1', '2018-01-12 16:13:05'),
+(254, 8, 3, 2, '2018wk4', '1', '2018-01-12 16:13:05'),
+(255, 8, 4, 1, '2018wk4', '1', '2018-01-12 16:13:05'),
+(256, 8, 4, 2, '2018wk4', '1', '2018-01-12 16:13:05'),
+(257, 32, 6, 3, '2018wk4', '1', '2018-01-12 16:13:05'),
+(258, 34, 5, 3, '2018wk4', '1', '2018-01-12 16:13:06'),
+(259, 1, 2, 1, '2018wk2', '1', '2018-01-12 16:16:47'),
+(260, 1, 2, 2, '2018wk2', '1', '2018-01-12 16:16:47'),
+(261, 1, 1, 1, '2018wk2', '1', '2018-01-12 16:16:47'),
+(262, 1, 1, 2, '2018wk2', '1', '2018-01-12 16:16:47'),
+(263, 12, 3, 1, '2018wk2', '1', '2018-01-12 16:16:47'),
+(264, 224, 3, 2, '2', '1', '2018-01-12 16:16:48'),
+(265, 32, 4, 1, '2', '1', '2018-01-12 16:16:48'),
+(266, 12, 4, 2, '2', '1', '2018-01-12 16:16:48'),
+(269, 1, 2, 1, '2', '1', '2018-01-12 16:32:48'),
+(270, 1, 6, 3, '2', '1', '2018-01-12 16:32:48'),
+(271, 1, 2, 1, '2', '1', '2018-01-12 18:15:36'),
+(272, 2, 2, 2, '2', '1', '2018-01-12 18:15:36'),
+(273, 2, 1, 1, '2', '1', '2018-01-12 18:15:36'),
+(274, 4, 1, 2, '2', '1', '2018-01-12 18:15:36'),
+(275, 4, 3, 1, '2', '1', '2018-01-12 18:15:36'),
+(276, 4, 3, 2, '2', '1', '2018-01-12 18:15:36'),
+(277, 4, 4, 1, '2', '1', '2018-01-12 18:15:36'),
+(278, 4, 4, 2, '2', '1', '2018-01-12 18:15:36'),
+(279, 4, 6, 3, '2', '1', '2018-01-12 18:15:36'),
+(280, 4, 5, 3, '2', '1', '2018-01-12 18:15:36'),
+(281, 111, 2, 1, '2', '1', '2018-02-28 12:00:10'),
+(282, 22, 2, 1, '2', '1', '2018-02-28 13:58:52'),
+(283, 2, 2, 2, '2', '1', '2018-02-28 13:58:52'),
+(284, 45, 1, 1, '', '', '2018-02-28 13:58:52'),
+(285, 21, 3, 1, '', '', '2018-02-28 13:58:52'),
+(286, 21, 3, 2, '', '', '2018-02-28 13:58:52'),
+(287, 22, 2, 1, '2018wk1', '1', '2018-02-28 14:00:04'),
+(288, 2, 2, 2, '2018wk1', '1', '2018-02-28 14:00:04'),
+(289, 45, 1, 1, '2018wk1', '1', '2018-02-28 14:00:04'),
+(290, 21, 3, 1, '2018wk1', '1', '2018-02-28 14:00:04'),
+(291, 21, 3, 2, '2018wk1', '1', '2018-02-28 14:00:04'),
+(292, 2, 2, 1, '2018wk1', '1', '2018-02-28 14:00:24'),
+(293, 2, 2, 2, '2018wk1', '1', '2018-02-28 14:00:24'),
+(294, 45, 1, 1, '2018wk1', '1', '2018-02-28 14:00:24'),
+(295, 21, 3, 1, '2018wk1', '1', '2018-02-28 14:00:24'),
+(296, 21, 3, 2, '2018wk1', '1', '2018-02-28 14:00:24'),
+(297, 1, 2, 1, '2018wk1', '1', '2018-02-28 14:01:04'),
+(298, 2, 2, 2, '2018wk1', '1', '2018-02-28 14:01:04'),
+(299, 45, 1, 1, '2018wk1', '1', '2018-02-28 14:01:04'),
+(300, 21, 3, 1, '2018wk1', '1', '2018-02-28 14:01:04'),
+(301, 21, 3, 2, '2018wk1', '1', '2018-02-28 14:01:04'),
+(302, 2, 2, 1, '2018wk1', '1', '2018-02-28 14:01:59'),
+(303, 2, 2, 2, '2018wk1', '1', '2018-02-28 14:01:59'),
+(304, 45, 1, 1, '2018wk1', '1', '2018-02-28 14:01:59'),
+(305, 21, 3, 1, '2018wk1', '1', '2018-02-28 14:01:59'),
+(306, 21, 3, 2, '2018wk1', '1', '2018-02-28 14:01:59'),
+(307, 1, 4, 2, '2018wk1', '1', '2018-02-28 14:05:09'),
+(308, 111, 1, 2, '', '1', '2018-02-28 14:10:03'),
+(309, 111, 1, 2, '', '1', '2018-02-28 14:11:02'),
+(310, 222, 1, 2, '', '1', '2018-02-28 14:11:25'),
+(311, 77, 1, 2, '', '1', '2018-02-28 14:12:31'),
+(312, 77, 1, 2, '', '1', '2018-02-28 14:13:05'),
+(313, 77, 1, 2, '', '1', '2018-02-28 14:13:25'),
+(314, 77, 1, 2, '1', '1', '2018-02-28 14:13:56'),
+(315, 1, 4, 1, '3', '1', '2018-03-03 23:13:42'),
+(316, 1, 4, 1, '3', '1', '2018-03-03 23:13:42'),
+(317, 1, 2, 1, '3', '3', '2018-03-03 23:16:26'),
+(318, 23, 3, 1, '2018wk3', '3', '2018-03-03 23:16:26');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sex`
+--
+
+CREATE TABLE `sex` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `code` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `upd_time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sex`
+--
+
+INSERT INTO `sex` (`id`, `name`, `code`, `upd_time`) VALUES
+(1, 'Male', 'M', '2018-03-23 00:00:00'),
+(2, 'Female', 'F', '2018-03-23 06:30:00');
 
 -- --------------------------------------------------------
 
@@ -285,7 +323,76 @@ INSERT INTO `what` (`id`, `name`, `type`, `code`, `upd_time`) VALUES
 (3, 'Measles', 'dis', NULL, '2018-01-01 15:37:34'),
 (4, 'Trauma', 'dis', NULL, '2018-01-01 15:37:34'),
 (5, 'Malaria Test', 'test', NULL, '2018-01-01 15:37:34'),
-(6, 'Malaria Positive', 'result', NULL, '2018-01-01 15:37:34');
+(6, 'Malaria Positive', 'result', NULL, '2018-01-01 15:37:34'),
+(7, 'CD4 tests', 'test', NULL, '2018-03-30 14:37:34'),
+(8, 'Viral Load Tests', 'test', NULL, '2018-03-30 14:37:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `when`
+--
+
+CREATE TABLE `when` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `code` varchar(25) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `type` varchar(5) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `value` bigint(14) DEFAULT NULL,
+  `month` varchar(8) NOT NULL,
+  `year` varchar(4) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `start` datetime DEFAULT NULL,
+  `end` datetime DEFAULT NULL,
+  `nbDays` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `when`
+--
+
+INSERT INTO `when` (`id`, `name`, `code`, `type`, `value`, `month`, `year`, `start`, `end`, `nbDays`) VALUES
+(1, '2018JanuaryWk1', NULL, 'w', 1, 'January', '2018', '2017-12-31 00:00:00', '2018-01-06 00:00:00', 7),
+(2, '2018JanuaryWk2', NULL, 'w', 2, 'January', '2018', '2018-01-07 00:00:00', '2018-01-13 00:00:00', 7),
+(3, '2018JanuaryWk3', NULL, 'w', 3, 'January', '2018', '2018-01-14 00:00:00', '2018-01-20 00:00:00', 7),
+(4, '2018JanuaryWk4', NULL, 'w', 4, 'January', '2018', '2018-01-21 00:00:00', '2018-01-27 00:00:00', 7),
+(5, '2018JanuaryWk5', NULL, 'w', 5, 'January', '2018', '2018-01-28 00:00:00', '2018-02-03 00:00:00', 7),
+(6, '2018FebruraryWk6', NULL, 'w', 6, 'February', '2018', '2018-02-04 00:00:00', '2018-01-10 00:00:00', 7),
+(7, '2018FebruraryWk7', NULL, 'w', 7, 'February', '2018', '2018-02-11 00:00:00', '2018-02-17 00:00:00', 7),
+(8, '2018FebruraryWk8', NULL, 'w', 8, 'February', '2018', '2018-02-18 00:00:00', '2018-02-24 00:00:00', 7),
+(9, '2018FebruraryWk9', NULL, 'w', 9, 'February', '2018', '2018-02-25 00:00:00', '2018-03-03 00:00:00', 7),
+(10, '2018MarchWk10', NULL, 'w', 10, 'March', '2018', '2018-03-04 00:00:00', '2018-03-10 00:00:00', 7),
+(11, '2018MarchWk11', NULL, 'w', 11, 'March', '2018', '2018-03-11 00:00:00', '2018-03-17 00:00:00', 7),
+(12, '2018MarchWk12', NULL, 'w', 12, 'March', '2018', '2018-03-18 00:00:00', '2018-03-24 00:00:00', 7),
+(13, '2018MarchWk13', NULL, 'w', 13, 'March', '2018', '2018-03-25 00:00:00', '2018-03-31 00:00:00', 7),
+(14, '2018AprilWk14', NULL, 'w', 14, 'April', '2018', '2018-04-01 00:00:00', '2018-04-07 00:00:00', 7),
+(15, '2018AprilWk15', NULL, 'w', 15, 'April', '2018', '2018-04-08 00:00:00', '2018-04-14 00:00:00', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `where`
+--
+
+CREATE TABLE `where` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `type` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `code` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `update_tine` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `where`
+--
+
+INSERT INTO `where` (`id`, `name`, `type`, `code`, `update_tine`) VALUES
+(1, 'OutPatient Department', 'srv', '', '2018-01-11 12:15:04'),
+(2, 'Emmergency Department', 'srv', '', '2018-01-12 11:16:00'),
+(3, 'InPatient Department', 'srv', '', '2018-01-12 13:08:00'),
+(4, 'Maternity', 'srv', ' ', '2018-01-12 13:08:00'),
+(5, 'Immunization', 'srv', ' ', '2018-01-12 12:37:00'),
+(7, 'ANC_PNC_FP', 'srv', '', '2018-03-30 13:37:00'),
+(6, 'Laboratory', 'srv', '', '2018-03-30 12:37:00');
 
 -- --------------------------------------------------------
 
@@ -295,48 +402,33 @@ INSERT INTO `what` (`id`, `name`, `type`, `code`, `upd_time`) VALUES
 
 CREATE TABLE `who` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `type` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `code` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `age_id` int(11) DEFAULT NULL,
+  `sex_id` int(11) DEFAULT NULL,
   `upd_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `who`
 --
 
-INSERT INTO `who` (`id`, `name`, `type`, `code`, `upd_time`) VALUES
-(1, '<5y', 'age', NULL, '2017-07-01 15:38:11'),
-(2, '>=5y', 'age', NULL, '2017-07-01 15:38:11'),
-(3, 'undefined', 'age', NULL, '2017-07-01 17:38:11');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `wwhere`
---
-
-CREATE TABLE `wwhere` (
-  `id` int(11) NOT NULL,
-  `name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `type` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `code` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `update_tine` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `wwhere`
---
-
-INSERT INTO `wwhere` (`id`, `name`, `type`, `code`, `update_tine`) VALUES
-(1, 'OPD Nkozi', 'srv', '', '2018-01-11 12:15:04'),
-(2, 'IPD Nkozi', 'srv', '', '2018-01-29 16:31:00'),
-(3, 'Maternity Nkozi', 'srv', '', '2018-01-29 16:31:05'),
-(4, 'ED Nkozi', 'srv', '', '2018-01-29 16:31:05');
+INSERT INTO `who` (`id`, `age_id`, `sex_id`, `upd_time`) VALUES
+(1, 1, 1, '2018-03-31 10:21:19');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `age`
+--
+ALTER TABLE `age`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `death`
+--
+ALTER TABLE `death`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `loginuser`
@@ -351,27 +443,52 @@ ALTER TABLE `record`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sex`
+--
+ALTER TABLE `sex`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `what`
 --
 ALTER TABLE `what`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `who`
+-- Indexes for table `when`
 --
-ALTER TABLE `who`
+ALTER TABLE `when`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `uniquewncode` (`code`);
+
+--
+-- Indexes for table `where`
+--
+ALTER TABLE `where`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wwhere`
+-- Indexes for table `who`
 --
-ALTER TABLE `wwhere`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `who`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK_ageID` (`age_id`),
+  ADD KEY `FK_sexID` (`sex_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `age`
+--
+ALTER TABLE `age`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT for table `death`
+--
+ALTER TABLE `death`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `loginuser`
 --
@@ -381,22 +498,38 @@ ALTER TABLE `loginuser`
 -- AUTO_INCREMENT for table `record`
 --
 ALTER TABLE `record`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=357;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=319;
+--
+-- AUTO_INCREMENT for table `sex`
+--
+ALTER TABLE `sex`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `what`
 --
 ALTER TABLE `what`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `where`
+--
+ALTER TABLE `where`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `who`
 --
 ALTER TABLE `who`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `wwhere`
+-- Constraints for dumped tables
 --
-ALTER TABLE `wwhere`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Constraints for table `who`
+--
+ALTER TABLE `who`
+  ADD CONSTRAINT `FK_ageID` FOREIGN KEY (`age_id`) REFERENCES `age` (`id`),
+  ADD CONSTRAINT `FK_sexID` FOREIGN KEY (`sex_id`) REFERENCES `sex` (`id`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
