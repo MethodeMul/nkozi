@@ -831,3 +831,13 @@ button.ui-button::-moz-focus-inner {
 body .ui-tooltip {
 	border-width: 2px;
 }
+
+
+table {
+width: 40em;
+border: medium solid #00F;
+border-collapse:collapse;
+}
+th, td {
+border: medium solid #00F;
+}
