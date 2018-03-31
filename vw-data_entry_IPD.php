@@ -117,97 +117,82 @@ $(document).ready(function() {
 <table id="Diagnostics_exit" class="display" cellspacing="0" width="400px">
 		<thead>
 			<tr>
-				<tr>
-					<th id="Diagn_exit" rowspan="3" scope="rowgroup">Diagnostics exit</th>
-					<th id="<5years" colspan="4" scope="colgroup">Under five years</th>
-					<th id="5&above" colspan="4" scope="colgroup">Five years and above</th>	
-				</tr>
-				<tr>
-					<th id="Cases" colspan="2" scope="colgroup">Cases</th>
-					<th id="Deaths" colspan="2" scope="colgroup">Deaths</th>
-					<th id="Cases" colspan="2" scope="colgroup">Cases</th>
-					<th id="Deaths" colspan="2" scope="colgroup">Deaths</th>	
-				</tr>
-
-			<tr align= center>	
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
+				<th id="Diagn_exit" rowspan="3" scope="rowgroup">Diagnostics exit</th>
+				<th id="age_5" colspan="4" scope="colgroup">Under five years</th>
+				<th id="age_6" colspan="4" scope="colgroup">Five years and above</th>	
+			</tr>
+			<tr>
+				<th id="exit_2" colspan="2" scope="colgroup">Cured</th>
+				<th id="exit_1" colspan="2" scope="colgroup">Deaths</th>
+				<th id="exit_2" colspan="2" scope="colgroup">Cured</th>
+				<th id="exit_1" colspan="2" scope="colgroup">Deaths</th>	
+			</tr>
+			<tr>	
+				<th id="sex_1" colspan="1" scope="colgroup">Male</th>
+				<th id="sex_2" colspan="1" scope="colgroup">Female</th>
+				<th id="sex_1" colspan="1" scope="colgroup">Male</th>
+				<th id="sex_2" colspan="1" scope="colgroup">Female</th>
+				<th id="sex_1" colspan="1" scope="colgroup">Male</th>
+				<th id="sex_2" colspan="1" scope="colgroup">Female</th>
+				<th id="sex_1" colspan="1" scope="colgroup">Male</th>
+				<th id="sex_2" colspan="1" scope="colgroup">Female</th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr align="center">
-				<td>Total</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<tr>  
 				<td>Malaria</td>
-				<td><input type="text" id="r_1_1" name="r_1_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_1_2" name="r_1_2" class="numericInput" value=""></td>
 				<td><input type="text" id="r_1_3" name="r_1_3" class="numericInput" value=""></td>
 				<td><input type="text" id="r_1_4" name="r_1_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_1_5" name="r_1_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_1_6" name="r_1_6" class="numericInput" value=""></td>
+				<td><input type="text" id="r_1_1" name="r_1_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_1_2" name="r_1_2" class="numericInput" value=""></td>
 				<td><input type="text" id="r_1_7" name="r_1_7" class="numericInput" value=""></td>
 				<td><input type="text" id="r_1_8" name="r_1_8" class="numericInput" value=""></td>
+				<td><input type="text" id="r_1_5" name="r_1_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_1_6" name="r_1_6" class="numericInput" value=""></td>
 			</tr>
 			<tr>
 				<td>Cholera</td>
-				<td><input type="text" id="r_2_1" name="r_2_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_2" name="r_2_2" class="numericInput" value=""></td>
 				<td><input type="text" id="r_2_3" name="r_2_3" class="numericInput" value=""></td>
 				<td><input type="text" id="r_2_4" name="r_2_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_2_1" name="r_2_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_2_2" name="r_2_6" class="numericInput" value=""></td>
+				<td><input type="text" id="r_2_7" name="r_2_7" class="numericInput" value=""></td>
+				<td><input type="text" id="r_2_8" name="r_2_8" class="numericInput" value=""></td>
 				<td><input type="text" id="r_2_5" name="r_2_5" class="numericInput" value=""></td>
 				<td><input type="text" id="r_2_6" name="r_2_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_5" name="r_2_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_6" name="r_2_8" class="numericInput" value=""></td>
 			</tr>
 			<tr>
 				<td>Measles</td>
-				<td><input type="text" id="r_3_1" name="r_3_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_3_2" name="r_3_2" class="numericInput" value=""></td>
 				<td><input type="text" id="r_3_3" name="r_3_3" class="numericInput" value=""></td>
 				<td><input type="text" id="r_3_4" name="r_3_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_3_5" name="r_3_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_3_6" name="r_3_6" class="numericInput" value=""></td>
+				<td><input type="text" id="r_3_1" name="r_3_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_3_2" name="r_3_2" class="numericInput" value=""></td>
 				<td><input type="text" id="r_3_7" name="r_3_7" class="numericInput" value=""></td>
 				<td><input type="text" id="r_3_8" name="r_3_8" class="numericInput" value=""></td>
+				<td><input type="text" id="r_3_5" name="r_3_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_3_6" name="r_3_6" class="numericInput" value=""></td>
 			</tr>
 			<tr>
 				<td>Trauma</td>
-				<td><input type="text" id="r_4_1" name="r_4_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_2" name="r_4_2" class="numericInput" value=""></td>
 				<td><input type="text" id="r_4_3" name="r_4_3" class="numericInput" value=""></td>
 				<td><input type="text" id="r_4_4" name="r_4_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_5" name="r_4_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_6" name="r_4_6" class="numericInput" value=""></td>
+				<td><input type="text" id="r_4_1" name="r_4_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_4_2" name="r_4_2" class="numericInput" value=""></td>
 				<td><input type="text" id="r_4_7" name="r_4_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_8" name="r_4_8" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_4_8" name="r_4_8" class="numericInput" value=""></td>
+				<td><input type="text" id="r_4_5" name="r_4_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_4_6" name="r_4_6" class="numericInput" value=""></td>				
 			</tr>
 			<tr>
 				<td>Diarrhoea acute</td>
-				<td><input type="text" id="r_4_1" name="r_4_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_2" name="r_4_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_3" name="r_4_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_4" name="r_4_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_5" name="r_4_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_6" name="r_4_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_7" name="r_4_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_4_8" name="r_4_8" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
+				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
+				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
+				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
+				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
+				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
+				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
+				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
 			</tr>
 		</tbody>
 	</table>
