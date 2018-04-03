@@ -53,23 +53,23 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Number of beds</td>
-				<td><input type="text" id="r_14_1" name="r_14_1" class="numericInput" value="">
+				<td><input type="text" id="r_22_1" name="r_22_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Admissions</td>
-				<td><input type="text" id="r_15_1" name="r_15_1" class="numericInput" value="">
+				<td><input type="text" id="r_19_1" name="r_19_1" class="numericInput" value="">
 				</td>
 			</tr>
 			
 			<tr>
 				<td>Length of stay</td>
-				<td><input type="text" id="r_17_1" name="r_17_1" class="numericInput" value="">
+				<td><input type="text" id="r_21_1" name="r_21_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Bed occupancy</td>
-				<td><input type="text" id="r_18_1" name="r_18_1" class="numericInput" value="">
+				<td><input type="text" id="r_20_1" name="r_20_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -91,22 +91,22 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Improved</td>
-				<td><input type="text" id="r_19_1" name="r_19_1" class="numericInput" value="">
+				<td><input type="text" id="r_25_1" name="r_25_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Desertion</td>
-				<td><input type="text" id="r_20_1" name="r_20_1" class="numericInput" value="">
+				<td><input type="text" id="r_24_1" name="r_24_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Death</td>
-				<td><input type="text" id="r_22_1" name="r_22_1" class="numericInput" value="">
+				<td><input type="text" id="r_23_1" name="r_23_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Referral</td>
-				<td><input type="text" id="r_23_1" name="r_23_1" class="numericInput" value="">
+				<td><input type="text" id="r_26_1" name="r_26_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -117,7 +117,7 @@ $(document).ready(function() {
 <table id="Diagnostics_exit" class="display" cellspacing="0" width="400px">
 		<thead>
 			<tr>
-				<th id="Diagn_exit" rowspan="3" scope="rowgroup">Diagnostics exit</th>
+				<th id="Diagnostics_exit" rowspan="3" scope="rowgroup">Diagnostics exit</th>
 				<th id="age_5" colspan="4" scope="colgroup">Under five years</th>
 				<th id="age_6" colspan="4" scope="colgroup">Five years and above</th>	
 			</tr>
@@ -185,14 +185,14 @@ $(document).ready(function() {
 			</tr>
 			<tr>
 				<td>Diarrhoea acute</td>
-				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
-				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
-				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
-				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
-				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
-				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
-				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
-				<td><input type="text" id="r_X_Y" name="r_X_Y" class="numericInput" value=""></td>
+				<td><input type="text" id="r_9_1" name="r_9_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_9_2" name="r_9_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_9_3" name="r_9_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_9_4" name="r_9_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_9_5" name="r_9_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_9_6" name="r_9_6" class="numericInput" value=""></td>
+				<td><input type="text" id="r_9_7" name="r_9_7" class="numericInput" value=""></td>
+				<td><input type="text" id="r_9_8" name="r_9_8" class="numericInput" value=""></td>
 			</tr>
 		</tbody>
 	</table>
@@ -215,12 +215,12 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Mulago</td>
-				<td><input type="text" id="r_7_1" name="r_7_1" class="numericInput" value="">
+				<td><input type="text" id="r_15_1" name="r_55_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Nsambya</td>
-				<td><input type="text" id="r_8_1" name="r_8_1" class="numericInput" value="">
+				<td><input type="text" id="r_16_1" name="r_56_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -244,12 +244,12 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Number of positives</td>
-				<td><input type="text" id="r_9_1" name="r_9_1" class="numericInput" value="">
+				<td><input type="text" id="r_6_1" name="r_6_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Number of tests</td>
-				<td><input type="text" id="r_10_1" name="r_10_1" class="numericInput" value="">
+				<td><input type="text" id="r_5_1" name="r_5_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -273,17 +273,12 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Number of positives</td>
-				<td><input type="text" id="r_11_1" name="r_11_1" class="numericInput" value="">
+				<td><input type="text" id="r_58_1" name="r_58_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Number of tests</td>
-				<td><input type="text" id="r_12_1" name="r_12_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Number of Pretests</td>
-				<td><input type="text" id="r_13_1" name="r_13_1" class="numericInput" value="">
+				<td><input type="text" id="r_57_1" name="r_57_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>

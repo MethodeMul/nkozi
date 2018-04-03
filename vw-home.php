@@ -47,7 +47,7 @@
 	<div id="content">
 		<?php
 		
-		if(isset($_GET['opt'])) { //??later dynamically depending on entered service
+		if(isset($_GET['opt'])) { 
 			if($_GET['opt'] == 'data') {
 				include ('vw-data_entry.php');
 				include ('vw-data_entry_OPD.php');
@@ -100,7 +100,29 @@
 			}
 		?>
 	</div>	
-	
+
+
+<!--
+	// fit a webpage size to fit any screen size
+	// JJ BORDERS
+
+// div {
+font-size: 16px; 
+height: 2em; 
+}
+//OR 
+div {
+height: auto; /*if more info comes on the page, it will stretch down*/
+width: 1000px;
+margin: 0 auto; /*this will cause the div to be in the center*/
+}
+
+//OR 
+
+
+-->	
 
 </body>
 </html>
+
+

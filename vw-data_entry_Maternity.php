@@ -18,19 +18,11 @@ $(document).ready(function() {
 	    dom: 'rt',
  	});
 
-    var table5 = $('#TestMlaria').dataTable({
-	    dom: 'rt',
-       });
-
  	var table6 = $('#HIVTest').dataTable({
 	    dom: 'rt',
  	});
 
  	var table7 = $('#Delivery_room').dataTable({
-	    dom: 'rt',
- 	});
-
- 	var table8 = $('#Procedures').dataTable({
 	    dom: 'rt',
  	});
 
@@ -56,7 +48,7 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Number of beds</td>
-				<td><input type="text" id="r_1_1" name="r_1_1" class="numericInput" value="">
+				<td><input type="text" id="r_22_1" name="r_22_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -81,17 +73,17 @@ $(document).ready(function() {
 			
 			<tr>
 				<td>Direct admissions</td>
-				<td><input type="text" id="r_2_1" name="r_2_1" class="numericInput" value="">
+				<td><input type="text" id="r_175_1" name="r_175_1" class="numericInput" value="">
 				</td>
 			</tr>	
 			<tr>
 				<td>Referrals to maternity unit</td>
-				<td><input type="text" id="r_3_1" name="r_3_1" class="numericInput" value="">
+				<td><input type="text" id="r_176_1" name="r_176_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Maternity referrals out</td>
-				<td><input type="text" id="r_4_1" name="r_4_1" class="numericInput" value="">
+				<td><input type="text" id="r_177_1" name="r_177_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -115,22 +107,22 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Improved condition</td>
-				<td><input type="text" id="r_5_1" name="r_5_1" class="numericInput" value="">
+				<td><input type="text" id="r_178_1" name="r_178_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Desertion</td>
-				<td><input type="text" id="r_6_1" name="r_6_1" class="numericInput" value="">
+				<td><input type="text" id="r_179_1" name="r_179_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Referrals</td>
-				<td><input type="text" id="r_7_1" name="r_7_1" class="numericInput" value="">
+				<td><input type="text" id="r_180_1" name="r_180_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Deaths</td>
-				<td><input type="text" id="r_8_1" name="r_8_1" class="numericInput" value="">
+				<td><input type="text" id="r_181_1" name="r_181_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -142,142 +134,86 @@ $(document).ready(function() {
 		<thead>
 			<tr>
 				<tr>
-					<th id="maternal_cond" rowspan="3" scope="rowgroup">Maternal conditions</th>
-					<th id="10-19years" colspan="4" scope="colgroup">10-19 years</th>
-					<th id="20-24years" colspan="4" scope="colgroup">20-24 years</th>	
-					<th id=">=25years" colspan="4" scope="colgroup">>=25 years</th>
+					<th id="maternal_cond" rowspan="2" scope="rowgroup">Maternal conditions</th>
+					<th id="age_7" colspan="2" scope="colgroup">10-19 years</th>
+					<th id="age_8" colspan="2" scope="colgroup">20-24 years</th>	
+					<th id="age_9" colspan="2" scope="colgroup">>=25 years</th>
 				</tr>
 				<tr>
-					<th id="Cases" colspan="2" scope="colgroup">Cases</th>
-					<th id="Deaths" colspan="2" scope="colgroup">Deaths</th>
-					<th id="Cases" colspan="2" scope="colgroup">Cases</th>
-					<th id="Deaths" colspan="2" scope="colgroup">Deaths</th>
-					<th id="Cases" colspan="2" scope="colgroup">Cases</th>
-					<th id="Deaths" colspan="2" scope="colgroup">Deaths</th>	
+					<th id="exit_2" >Cases</th>
+					<th id="exit_1" >Deaths</th>
+					<th id="exit_2" >Cases</th>
+					<th id="exit_1" >Deaths</th>
+					<th id="exit_2" >Cases</th>
+					<th id="exit_1" >Deaths</th>
 				</tr>
-
-			<tr align= center>	
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-			</tr>
 		</thead>
 		<tfoot>
-			<tr align="center">
-				<td>Total</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-			</tr>
+				<tr>
+					<th id="maternnalcondition" >Maternnal condition</th>
+					<th id="Cases" >Cases</th>
+					<th id="Deaths" >Deaths</th>
+					<th id="Cases" >Cases</th>
+					<th id="Deaths" >Deaths</th>
+					<th id="Cases" >Cases</th>
+					<th id="Deaths" >Deaths</th>
+				</tr>
 		</tfoot>
 		<tbody>
 			<tr>  
 				<td>Abortion</td>
-				<td><input type="text" id="r_9_1" name="r_9_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_2" name="r_9_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_3" name="r_9_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_4" name="r_9_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_5" name="r_9_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_6" name="r_9_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_7" name="r_9_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_8" name="r_9_8" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_9" name="r_9_9" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_10" name="r_9_10" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_11" name="r_9_11" class="numericInput" value=""></td>
-				<td><input type="text" id="r_9_12" name="r_9_12" class="numericInput" value=""></td>
+				
+				<td><input type="text" id="r_182_1" name="r_182_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_182_2" name="r_182_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_182_3" name="r_182_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_182_4" name="r_182_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_182_5" name="r_182_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_182_6" name="r_182_6" class="numericInput" value=""></td>
 			</tr>
 			<tr>
 				<td>Obstructed labour</td>
-				<td><input type="text" id="r_10_1" name="r_10_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_2" name="r_10_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_3" name="r_10_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_4" name="r_10_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_5" name="r_10_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_6" name="r_10_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_7" name="r_10_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_8" name="r_10_8" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_9" name="r_10_9" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_10" name="r_10_10" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_11" name="r_10_11" class="numericInput" value=""></td>
-				<td><input type="text" id="r_10_12" name="r_10_12" class="numericInput" value=""></td>
+				<td><input type="text" id="r_183_1" name="r_183_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_183_2" name="r_183_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_183_3" name="r_183_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_183_4" name="r_183_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_183_5" name="r_183_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_183_6" name="r_183_6" class="numericInput" value=""></td>
 			</tr>
 			<tr>
 				<td>Malaria in pregnancy</td>
-				<td><input type="text" id="r_11_1" name="r_11_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_2" name="r_11_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_3" name="r_11_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_4" name="r_11_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_5" name="r_11_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_6" name="r_11_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_7" name="r_11_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_8" name="r_11_8" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_9" name="r_11_9" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_10" name="r_11_10" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_11" name="r_11_11" class="numericInput" value=""></td>
-				<td><input type="text" id="r_11_12" name="r_11_12" class="numericInput" value=""></td>
+				<td><input type="text" id="r_184_1" name="r_184_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_184_2" name="r_184_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_184_3" name="r_184_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_184_4" name="r_184_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_184_5" name="r_184_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_184_6" name="r_184_6" class="numericInput" value=""></td>
 			</tr>
 			<tr>
 				<td>Haemorrage related to pregnancy</td>
-				<td><input type="text" id="r_12_1" name="r_12_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_2" name="r_12_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_3" name="r_12_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_4" name="r_12_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_5" name="r_12_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_6" name="r_12_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_7" name="r_12_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_8" name="r_12_8" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_9" name="r_12_9" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_10" name="r_12_10" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_11" name="r_12_11" class="numericInput" value=""></td>
-				<td><input type="text" id="r_12_12" name="r_12_12" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_185_1" name="r_185_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_185_2" name="r_185_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_185_3" name="r_185_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_185_4" name="r_185_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_185_5" name="r_185_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_185_6" name="r_185_6" class="numericInput" value=""></td>			
 			</tr>
 			<tr>
 				<td>Pelvic inflamatory disease</td>
-				<td><input type="text" id="r_13_1" name="r_13_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_2" name="r_13_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_3" name="r_13_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_4" name="r_13_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_5" name="r_13_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_6" name="r_13_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_7" name="r_13_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_8" name="r_13_8" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_9" name="r_13_9" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_10" name="r_13_10" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_11" name="r_13_11" class="numericInput" value=""></td>
-				<td><input type="text" id="r_13_12" name="r_13_12" class="numericInput" value=""></td>					
+				<td><input type="text" id="r_186_1" name="r_186_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_186_2" name="r_186_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_186_3" name="r_186_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_186_4" name="r_186_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_186_5" name="r_186_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_186_6" name="r_186_6" class="numericInput" value=""></td>			
 			</tr>
 			<tr>
-				<td>Other</td>
-				<td><input type="text" id="r_14_1" name="r_14_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_2" name="r_14_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_3" name="r_14_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_4" name="r_14_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_5" name="r_14_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_6" name="r_14_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_7" name="r_14_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_8" name="r_14_8" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_9" name="r_14_9" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_10" name="r_14_10" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_11" name="r_14_11" class="numericInput" value=""></td>
-				<td><input type="text" id="r_14_12" name="r_14_12" class="numericInput" value=""></td>				
+				<td>Other maternal conditions</td>
+				<td><input type="text" id="r_187_1" name="r_187_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_187_2" name="r_187_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_187_3" name="r_187_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_187_4" name="r_187_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_187_5" name="r_187_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_187_6" name="r_187_6" class="numericInput" value=""></td>		
 			</tr>
 		</tbody>
 	</table>
@@ -300,12 +236,12 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Number of positives</td>
-				<td><input type="text" id="r_15_1" name="r_15_1" class="numericInput" value="">
+				<td><input type="text" id="r_6_1" name="r_6_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Number of tests</td>
-				<td><input type="text" id="r_16_1" name="r_16_1" class="numericInput" value="">
+				<td><input type="text" id="r_5_1" name="r_5_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -329,73 +265,73 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>1st time this pregnancy</td>
-				<td><input type="text" id="r_17_1" name="r_17_1" class="numericInput" value="">
+				<td><input type="text" id="r_188_1" name="r_188_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Retest this pregnancy</td>
-				<td><input type="text" id="r_18_1" name="r_18_1" class="numericInput" value="">
+				<td><input type="text" id="r_189_1" name="r_189_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Tested HIV+ 1st time this pregnancy</td>
-				<td><input type="text" id="r_19_1" name="r_19_1" class="numericInput" value="">
+				<td><input type="text" id="r_190_1" name="r_190_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Tested HIV+ Retest this pregnancy</td>
-				<td><input type="text" id="r_20_1" name="r_20_1" class="numericInput" value="">
+				<td><input type="text" id="r_191_1" name="r_20_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>HIV+ women initiating ART in Maternity</td>
-				<td><input type="text" id="r_21_1" name="r_21_1" class="numericInput" value="">
+				<td><input type="text" id="r_192_1" name="r_192_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Deliveries to HIV+ women in unit total</td>
-				<td><input type="text" id="r_22_1" name="r_22_1" class="numericInput" value="">
+				<td><input type="text" id="r_193_1" name="r_193_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Deliveries to HIV+ women in unit Live births</td>
-				<td><input type="text" id="r_23_1" name="r_23_1" class="numericInput" value="">
+				<td><input type="text" id="r_194_1" name="r_194_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Women who initiated breast feeding after the first hour after delivery total</td>
-				<td><input type="text" id="r_24_1" name="r_24_1" class="numericInput" value="">
+				<td><input type="text" id="r_195_1" name="r_195_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Women who initiated breast feeding after the first hour after delivery HIV+</td>
-				<td><input type="text" id="r_25_1" name="r_25_1" class="numericInput" value="">
+				<td><input type="text" id="r_196_1" name="r_196_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Babies born with low weight <2,5kg </td>
-				<td><input type="text" id="r_26_1" name="r_26_1" class="numericInput" value="">
+				<td><input type="text" id="r_197_1" name="r_197_1" class="numericInput" value="">
 				</td>
 			</tr>
 
 			<tr>
 				<td>Live birth </td>
-				<td><input type="text" id="r_27_1" name="r_27_1" class="numericInput" value="">
+				<td><input type="text" id="r_198_1" name="r_198_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Babies born with defect</td>
-				<td><input type="text" id="r_28_1" name="r_28_1" class="numericInput" value="">
+				<td><input type="text" id="r_199_1" name="r_199_1" class="numericInput" value="">
 				</td>
 			</tr>	
 			<tr>
 				<td>Mothers given vit A supplementation</td>
-				<td><input type="text" id="r_29_1" name="r_29_1" class="numericInput" value="">
+				<td><input type="text" id="r_200_1" name="r_200_1" class="numericInput" value="">
 				</td>
 			</tr>	
 			<tr>
 				<td>New born death (0-7 days)</td>
-				<td><input type="text" id="r_30_1" name="r_30_1" class="numericInput" value="">
+				<td><input type="text" id="r_201_1" name="r_201_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
@@ -419,85 +355,49 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Normal delivery</td>
-				<td><input type="text" id="r_31_1" name="r_31_1" class="numericInput" value="">
+				<td><input type="text" id="r_202_1" name="r_202_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Caesarian sections</td>
-				<td><input type="text" id="r_32_1" name="r_32_1" class="numericInput" value="">
+				<td><input type="text" id="r_203_1" name="r_203_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Herniorrhaphy</td>
-				<td><input type="text" id="r_33_1" name="r_33_1" class="numericInput" value="">
+				<td><input type="text" id="r_204_1" name="r_204_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Other procedures</td>
-				<td><input type="text" id="r_34_1" name="r_34_1" class="numericInput" value="">
+				<td><input type="text" id="r_205_1" name="r_205_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Fresh still birth</td>
-				<td><input type="text" id="r_35_1" name="r_35_1" class="numericInput" value="">
+				<td><input type="text" id="r_206_1" name="r_206_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Macereted still birth</td>
-				<td><input type="text" id="r_36_1" name="r_36_1" class="numericInput" value="">
+				<td><input type="text" id="r_207_1" name="r_207_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Live birth</td>
-				<td><input type="text" id="r_37_1" name="r_37_1" class="numericInput" value="">
+				<td><input type="text" id="r_208_1" name="r_208_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Pre-Term births</td>
-				<td><input type="text" id="r_38_1" name="r_38_1" class="numericInput" value="">
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<br>
-	<table id="Procedures" class="display" cellspacing="0" width="400px" align=center>
-		<thead>
-			<tr>
-				<th>Procedures</th>
-				<th>Nunber</th>
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>
-				<th>Procedures</th>
-				<th>Number</th>
-			</tr>
-		</tfoot>
-		<tbody>
-			<tr>
-				<td>Normal delivery</td>
-				<td><input type="text" id="r_39_1" name="r_39_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Caesarian sections</td>
-				<td><input type="text" id="r_40_1" name="r_40_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Herniorrhaphy</td>
-				<td><input type="text" id="r_41_1" name="r_41_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Other procedures</td>
-				<td><input type="text" id="r_42_1" name="r_42_1" class="numericInput" value="">
+				<td><input type="text" id="r_209_1" name="r_209_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
 	</table>
 
 	<br>
+
 	<table id="utilization_of_serv" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
@@ -510,34 +410,27 @@ $(document).ready(function() {
 		</thead>
 		<tbody>
 			<tr>
-				<td>Normal delivery</td>
-				<td><input type="text" id="r_43_1" name="r_43_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_43_2" name="r_43_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_43_3" name="r_43_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_43_4" name="r_43_4" class="numericInput" value=""></td>
+				<td>Severe malaria</td>
+				<td><input type="text" id="r_210_1" name="r_210_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_210_2" name="r_210_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_210_3" name="r_210_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_210_4" name="r_210_4" class="numericInput" value=""></td>
 			</tr>
 			<tr>
-				<td>Caesarian sections</td>
-				<td><input type="text" id="r_44_1" name="r_44_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_44_2" name="r_44_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_44_3" name="r_44_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_44_4" name="r_44_4" class="numericInput" value=""></td>
+				<td>Pregnancy child related complications</td>
+				<td><input type="text" id="r_211_1" name="r_211_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_211_2" name="r_211_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_211_3" name="r_211_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_211_4" name="r_211_4" class="numericInput" value=""></td>
 				</td>
 			</tr>
 			<tr>
-				<td>Herniorrhaphy</td>
-				<td><input type="text" id="r_45_1" name="r_45_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_45_2" name="r_45_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_45_3" name="r_45_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_45_4" name="r_45_4" class="numericInput" value=""></td>
+				<td>Accidents</td>
+				<td><input type="text" id="r_212_1" name="r_212_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_212_2" name="r_212_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_212_3" name="r_212_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_212_4" name="r_212_4" class="numericInput" value=""></td>
 			</tr>
-			<tr>
-				<td>Other procedures</td>
-				<td><input type="text" id="r_46_1" name="r_46_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_46_2" name="r_46_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_46_3" name="r_46_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_46_4" name="r_46_4" class="numericInput" value=""></td>
-				</td>
 			</tr>
 		</tbody>
 	</table>

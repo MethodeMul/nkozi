@@ -15,6 +15,9 @@ $(document).ready(function() {
 	    dom: 'rt',
        });
 
+    var table4 = $('#HIVTest').dataTable({
+	    dom: 'rt',
+       });
 });
 </script>
 
@@ -22,36 +25,23 @@ $(document).ready(function() {
 		<thead>
 			<tr>
 				<th>Diagnostic (New cases)</th>
-				<th id="0-28" colspan="2" scope="colgroup">0-28 days</th>
-				<th id="29days-4years" colspan="2" scope="colgroup">29days-4years</th>
-				<th id="5-59years" colspan="2" scope="colgroup">5-59 years</th>
-				<th id="60&above" colspan="2" scope="colgroup">60 years & above</th>
+				<th id="age_1" colspan="2" scope="colgroup">0-28 days</th>
+				<th id="age_2" colspan="2" scope="colgroup">29days-4years</th>
+				<th id="age_3" colspan="2" scope="colgroup">5-59 years</th>
+				<th id="age_4" colspan="2" scope="colgroup">60 years & above</th>
 			</tr>
 			<tr align= center>	
-				<th>Category</th>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
-					<td>Male</td>
-					<td>Female</td>
+				<th>Category</th>	
+				<th id="sex_1">Male</th>
+				<th id="sex_2">Female</th>
+				<th id="sex_1">Male</th>
+				<th id="sex_2">Female</th>
+				<th id="sex_1">Male</th>
+				<th id="sex_2">Female</th>
+				<th id="sex_1">Male</th>
+				<th id="sex_2">Female</th>
 			</tr>
 		</thead>
-		<tfoot>
-			<tr align = center>
-				<th>Total (New cases)</th>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-				<td>Male</td>
-				<td>Female</td>
-			</tr>
-		</tfoot>
 		<tbody>
 			<tr>  
 				<td>Malaria</td>
@@ -69,14 +59,14 @@ $(document).ready(function() {
 			</tr>
 			<tr>
 				<td>Typhoid Fever</td>
-				<td><input type="text" id="r_2_1" name="r_2_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_2" name="r_2_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_3" name="r_2_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_4" name="r_2_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_5" name="r_2_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_6" name="r_2_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_7" name="r_2_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_2_8" name="r_2_8" class="numericInput" value=""></td>			
+				<td><input type="text" id="r_10_1" name="r_10_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_10_2" name="r_10_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_10_3" name="r_10_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_10_4" name="r_10_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_10_5" name="r_10_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_10_6" name="r_10_6" class="numericInput" value=""></td>
+				<td><input type="text" id="r_10_7" name="r_10_7" class="numericInput" value=""></td>
+				<td><input type="text" id="r_10_8" name="r_10_8" class="numericInput" value=""></td>			
 			</tr>
 			<tr>
 				<td>Measles</td>
@@ -102,32 +92,33 @@ $(document).ready(function() {
 			</tr>
 			<tr>
 				<td>Pneumonia</td>
-				<td><input type="text" id="r_5_1" name="r_5_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_5_2" name="r_5_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_5_3" name="r_5_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_5_4" name="r_5_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_5_5" name="r_5_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_5_6" name="r_5_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_5_7" name="r_5_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_5_8" name="r_5_8" class="numericInput" value=""></td>
+				<td><input type="text" id="r_18_1" name="r_18_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_18_2" name="r_18_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_18_3" name="r_18_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_18_4" name="r_18_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_18_5" name="r_18_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_18_6" name="r_18_6" class="numericInput" value=""></td>
+				<td><input type="text" id="r_18_7" name="r_18_7" class="numericInput" value=""></td>
+				<td><input type="text" id="r_18_8" name="r_18_8" class="numericInput" value=""></td>
 			</tr>
 			<tr>
 				<td>No pneumonia - Cough or cold</td>
-				<td><input type="text" id="r_6_1" name="r_6_1" class="numericInput" value=""></td>
-				<td><input type="text" id="r_6_2" name="r_6_2" class="numericInput" value=""></td>
-				<td><input type="text" id="r_6_3" name="r_6_3" class="numericInput" value=""></td>
-				<td><input type="text" id="r_6_4" name="r_6_4" class="numericInput" value=""></td>
-				<td><input type="text" id="r_6_5" name="r_6_5" class="numericInput" value=""></td>
-				<td><input type="text" id="r_6_6" name="r_6_6" class="numericInput" value=""></td>
-				<td><input type="text" id="r_6_7" name="r_6_7" class="numericInput" value=""></td>
-				<td><input type="text" id="r_6_8" name="r_6_8" class="numericInput" value=""></td>
+				<td><input type="text" id="r_17_1" name="r_17_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_17_2" name="r_17_2" class="numericInput" value=""></td>
+				<td><input type="text" id="r_17_3" name="r_17_3" class="numericInput" value=""></td>
+				<td><input type="text" id="r_17_4" name="r_17_4" class="numericInput" value=""></td>
+				<td><input type="text" id="r_17_5" name="r_17_5" class="numericInput" value=""></td>
+				<td><input type="text" id="r_17_6" name="r_17_6" class="numericInput" value=""></td>
+				<td><input type="text" id="r_17_7" name="r_17_7" class="numericInput" value=""></td>
+				<td><input type="text" id="r_17_8" name="r_17_8" class="numericInput" value=""></td>
+
 			</tr>
 		</tbody>
 	</table>
 
 	<br>
 	
-	<table id="Referrals" class="display" cellspacing="0" width="400px">
+	<table id="Referrals" class="display" cellspacing="0" width="400px" >
 		<thead>
 			<tr>
 				<th>Referrals</th>
@@ -143,22 +134,25 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Mulago</td>
-				<td><input type="text" id="r_7_1" name="r_7_1" class="numericInput" value="">
+				<td><input type="text" id="r_15_1" name="r_15_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Nsambya</td>
-				<td><input type="text" id="r_8_1" name="r_8_1" class="numericInput" value="">
+				<td><input type="text" id="r_16_1" name="r_16_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Other referral</td>
+				<td><input type="text" id="r_59_1" name="r_59_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
 	</table>
 
 	<br>
-<!------ TO BE TAKEN INTO THE LAB FORM -->
 
-
-	<table id="TestMalaria" class="display" cellspacing="0" width="400px">
+	<table id="TestMalaria" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
 				<th>Test Malaria</th>
@@ -174,12 +168,41 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Number of positives</td>
-				<td><input type="text" id="r_9_1" name="r_9_1" class="numericInput" value="">
+				<td><input type="text" id="r_6_1" name="r_6_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Number of tests</td>
-				<td><input type="text" id="r_10_1" name="r_10_1" class="numericInput" value="">
+				<td><input type="text" id="r_5_1" name="r_5_1" class="numericInput" value="">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+
+	<table id="HIVTest" class="display" cellspacing="0" width="400px" align=center>
+		<thead>
+			<tr>
+				<th>HIV Test</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>HIV Test</th>
+				<th>Total</th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Number of positives</td>
+				<td><input type="text" id="r_58_1" name="r_58_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Number of tests</td>
+				<td><input type="text" id="r_57_1" name="r_57_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>
