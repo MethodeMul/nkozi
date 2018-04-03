@@ -96,6 +96,33 @@ $(document).ready(function() {
 	$('#week').val($.cookie("week"));
 	//---------------------------
 
+	    //-------- Submit button event to call controller and store values
+	$('.submit').click(function(event) {
+		//e.preventDefault();
+		var $form = $(this).closest('form'); // get the form element this button belongs to
+		
+	    jQuery.post( 'ctl-write_values_form.php', $form.serialize(),
+	    	    function( data ) {
+    	    		alert("Values encoded successfully");
+    	    		console.log("Values encoded");
+    	            $('#er').html("lolo");
+    	            $('#er').val("papaaa");
+	    	        var data = eval( '('+dataStr+')' );
+	    	        if(data.result == 1) {
+	    	        	console.log("success---");
+	    	            $('#er').html(data.msg);
+	    	            $('#er').val("papaaa");
+	    	            console.log(data.msg);
+	    	            
+	    	        }
+	    	        else {
+	    	        	console.log(data.msg);				        
+	    	        	$('#er').html(data.msg);
+	    	        }
+	   	});
+	   	
+	});
+	
 } );
 </script>
 
