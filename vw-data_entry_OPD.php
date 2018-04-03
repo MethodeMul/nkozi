@@ -123,15 +123,15 @@ $(document).ready(function() {
 				<th id="age_4" colspan="2" scope="colgroup">60 years & above</th>
 			</tr>
 			<tr align= center>	
-				<th  length="90px">Category</th>
-				<th>Male</th>
-				<th>Female</th>
-				<th>Male</th>
-				<th>Female</th>
-				<th>Male</th>
-				<th>Female</th>
-				<th>Male</th>
-				<th>Female</th>
+				<th>Category</th>	
+				<th id="sex_1">Male</th>
+				<th id="sex_2">Female</th>
+				<th id="sex_1">Male</th>
+				<th id="sex_2">Female</th>
+				<th id="sex_1">Male</th>
+				<th id="sex_2">Female</th>
+				<th id="sex_1">Male</th>
+				<th id="sex_2">Female</th>
 			</tr>
 		</thead>
 		
