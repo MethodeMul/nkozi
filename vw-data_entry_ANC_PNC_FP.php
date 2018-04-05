@@ -14,49 +14,32 @@ $(document).ready(function() {
 	<table id="postnatal_attendances" class="display" cellspacing="0" width="400px">
 		<thead>
 			<tr>
-				<th colspan="2">POST NATAL CONSULTATIONS</th>
+				<th colspan="8">POST NATAL CONSULTATIONS</th>
 			</tr>
 			<tr>
 				<th>Postnal attendances</th>
-				<th>Number</th>
+				<th id="age_7">10-19 years</th>
+				<th id="age_8">20-24 years</th>
+				<th id="age_9">>=25 years</th>
+				<th id="age_20">6 hours</th>	
+				<th id="age_21">6 days</th>
+				<th id="age_22">6 weeks</th>
+				<th id="age_23">6 moths</th>
+
 			</tr>
 		</thead>
-		<tfoot>
-			<tr>
-				<th>Postnal attendances</th>
-				<th>Number</th>
-			</tr>
-		</tfoot>
 		<tbody>
-			
 			<tr>
-				<td>10-19 years</td>
-				<td><input type="text" id="r_1_1" name="r_1_1" class="numericInput" value="">
-				</td>
-			</tr>	
-			<tr>
-				<td>20-24 years</td>
-				<td><input type="text" id="r_2_1" name="r_2_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>>=25 years</td>
-				<td><input type="text" id="r_3_1" name="r_3_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>6 hours</td>
-				<td><input type="text" id="r_4_1" name="r_4_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>6 days</td>
-				<td><input type="text" id="r_4_1" name="r_4_1" class="numericInput" value="">
-				</td>
+				<td>Number</td>
+				<td><input type="text" id="r_214_1" name="r_214_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_214_2" name="r_214_2" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_214_3" name="r_214_3" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_214_4" name="r_214_4" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_214_5" name="r_214_5" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_214_6" name="r_214_6" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_214_7" name="r_214_7" class="numericInput" value=""></td>
 			</tr>
 		</tbody>
 	</table>
-
-	<br>
 
 	
