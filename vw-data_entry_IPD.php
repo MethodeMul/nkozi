@@ -215,12 +215,12 @@ $(document).ready(function() {
 		<tbody>
 			<tr>
 				<td>Mulago</td>
-				<td><input type="text" id="r_15_1" name="r_55_1" class="numericInput" value="">
+				<td><input type="text" id="r_15_1" name="r_15_1" class="numericInput" value="">
 				</td>
 			</tr>
 			<tr>
 				<td>Nsambya</td>
-				<td><input type="text" id="r_16_1" name="r_56_1" class="numericInput" value="">
+				<td><input type="text" id="r_16_1" name="r_16_1" class="numericInput" value="">
 				</td>
 			</tr>
 		</tbody>

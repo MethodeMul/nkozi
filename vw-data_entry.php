@@ -61,7 +61,7 @@ $(document).ready(function() {
 			break;
 			case '3':
 				window.location.href="vw-home.php?opt=data-IPD";
-			break;
+			break;	
 			case '5':
 				window.location.href="vw-home.php?opt=data-IMM";
 			break;	
@@ -108,6 +108,7 @@ $(document).ready(function() {
     	            $('#er').html("lolo");
     	            $('#er').val("papaaa");
 	    	        var data = eval( '('+dataStr+')' );
+
 	    	        if(data.result == 1) {
 	    	        	console.log("success---");
 	    	            $('#er').html(data.msg);
@@ -119,8 +120,10 @@ $(document).ready(function() {
 	    	        	console.log(data.msg);				        
 	    	        	$('#er').html(data.msg);
 	    	        }
+
 	   	});
 	   	
+		location.reload();
 	});
 	
 } );
@@ -185,3 +188,5 @@ $(document).ready(function() {
 		</select>
 	</div>
 
+
+	

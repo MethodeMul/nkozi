@@ -249,6 +249,65 @@ $(document).ready(function() {
 
 	<br>
 
+	<table id="Delivery_room" class="display" cellspacing="0" width="400px" align=center>
+		<thead>
+			<tr>
+				<th>Delivery room</th>
+				<th>Nunber</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>Delivery room</th>
+				<th>Number</th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>Normal delivery</td>
+				<td><input type="text" id="r_202_1" name="r_202_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Caesarian sections</td>
+				<td><input type="text" id="r_203_1" name="r_203_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Herniorrhaphy</td>
+				<td><input type="text" id="r_204_1" name="r_204_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Other procedures</td>
+				<td><input type="text" id="r_205_1" name="r_205_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Fresh still birth</td>
+				<td><input type="text" id="r_206_1" name="r_206_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Macereted still birth</td>
+				<td><input type="text" id="r_207_1" name="r_207_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Live birth</td>
+				<td><input type="text" id="r_208_1" name="r_208_1" class="numericInput" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Pre-Term births</td>
+				<td><input type="text" id="r_209_1" name="r_209_1" class="numericInput" value="">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<br>
+
 	<table id="HIVTest" class="display" cellspacing="0" width="400px" align=center>
 		<thead>
 			<tr>
@@ -337,64 +396,7 @@ $(document).ready(function() {
 		</tbody>
 	</table>
 
-	<br>
-
-	<table id="Delivery_room" class="display" cellspacing="0" width="400px" align=center>
-		<thead>
-			<tr>
-				<th>Delivery room</th>
-				<th>Nunber</th>
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>
-				<th>Delivery room</th>
-				<th>Number</th>
-			</tr>
-		</tfoot>
-		<tbody>
-			<tr>
-				<td>Normal delivery</td>
-				<td><input type="text" id="r_202_1" name="r_202_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Caesarian sections</td>
-				<td><input type="text" id="r_203_1" name="r_203_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Herniorrhaphy</td>
-				<td><input type="text" id="r_204_1" name="r_204_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Other procedures</td>
-				<td><input type="text" id="r_205_1" name="r_205_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Fresh still birth</td>
-				<td><input type="text" id="r_206_1" name="r_206_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Macereted still birth</td>
-				<td><input type="text" id="r_207_1" name="r_207_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Live birth</td>
-				<td><input type="text" id="r_208_1" name="r_208_1" class="numericInput" value="">
-				</td>
-			</tr>
-			<tr>
-				<td>Pre-Term births</td>
-				<td><input type="text" id="r_209_1" name="r_209_1" class="numericInput" value="">
-				</td>
-			</tr>
-		</tbody>
-	</table>
+	
 
 	<br>
 

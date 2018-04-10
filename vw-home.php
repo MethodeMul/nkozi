@@ -21,7 +21,8 @@ session_start();
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" language="javascript" class="init"></script>
-</head>
+<script type="text/javascript" src="DataTables-1.10.2/extensions/Plugins/API/sum.js"></script>
+</head>                                                                                                                                                                                                                
 
 <body>
 	<?php
@@ -33,6 +34,7 @@ session_start();
 	<div id="navigation">	
 		<a href="vw-home.php"><img src="" border="0"></a> <!--need to look for a stheto.ico-->
 		<a href="vw-home.php?opt=data">Data entry</a>
+		<a href="vw-home.php?opt=indic">Indicators</a>
 		<a href="vw-home.php?opt=report">Reports</a>
 		<!--<a href="vw-home.php?opt=admin">Administrative</a>-->
 		<a href="vw-home.php?opt=con">Contact</a>
@@ -85,8 +87,12 @@ session_start();
 				include ('vw-data_entry.php');
 				include ('vw-data_entry_ANC_PNC_FP.php');		
 			}
+
+			elseif($_GET['opt'] == 'indic') {
+				include ('vw-indicators.php');	
+			}
 			elseif($_GET['opt'] == 'report') {
-				echo '<p>Overview of all patients indicators per service </p>';
+				echo '<p>Overview of all service reports per service </p>';
 				echo '<br>';
 			}
 			elseif($_GET['opt'] == 'con') {
@@ -106,28 +112,8 @@ session_start();
 		?>
 	</div>	
 
-
-<!--
-	// fit a webpage size to fit any screen size
-	// JJ BORDERS
-
-// div {
-font-size: 16px; 
-height: 2em; 
-}
-//OR 
-div {
-height: auto; /*if more info comes on the page, it will stretch down*/
-width: 1000px;
-margin: 0 auto; /*this will cause the div to be in the center*/
-}
-
-//OR 
-
-
--->	
-
 </body>
+
 </html>
 
 
