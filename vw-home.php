@@ -21,7 +21,6 @@ session_start();
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" language="javascript" class="init"></script>
-<script type="text/javascript" src="DataTables-1.10.2/extensions/Plugins/API/sum.js"></script>
 </head>                                                                                                                                                                                                                
 
 <body>

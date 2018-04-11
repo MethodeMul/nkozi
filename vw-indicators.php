@@ -1,5 +1,28 @@
-
+<style>
+<?php include 'ind_table.css'; ?>
+</style>
 <script type="text/javascript">
+$(document).ready(function() {
+	$("#launch").click(function() {
+        url="ctl-ind_query.php";
+	var val = $("#ind").val();
+	data="ind="+val;
+	console.log(data);
+	$.post(url,data,function(data){
+	  $("#indicator_result").html(data);
+	});   
+    });
+	
+	$("#srvtype").change(function() {
+        url="ctl-ind_query.php";
+	var val = $(this).val();
+	data="srvtype="+val;
+	console.log(data);
+	$.post(url,data,function(data){
+	  $("#ind").html(data);
+	});   
+    });
+
 	function populate (s1, s2){
 		var s1 = document.getElementById(s1);
 		var s2 = document.getElementById(s2);
@@ -49,6 +72,7 @@
 				s2.options.add(newOption);
 		}
 	}
+} );
 </script>
 
 <style>
@@ -84,6 +108,43 @@
 	<select name="selectindicator" id="selectindicator">
 
 	</select>
+	
+	<br>
+	<hr />
+	<br>
+		
+	<p><label><b>Choose service type</b></label></p> 
+	<select name="srvtype" id="srvtype">
+		<?php 
+		include_once 'ctl-db_connection.php';
+		$sql = mysqli_query($connection, "SELECT DISTINCT type FROM `indicator`");
+		echo "<option value=\"\">-- Select srv type --</option>";
+		for ($i = 0; $i < mysqli_num_rows($sql); $i++) {
+			$row = mysqli_fetch_assoc($sql);
+			//echo "<option></option>";
+			echo "<option value=\"". $row['type'] . "\">" . $row['type'] . "</option>";
+		}
+		?>
+	</select>
+	
+	<br>
+	<br>
+	<p><label><b>Choose indicator</b></label></p>
+	<select name="ind" id="ind">
+		<option>-- Select Indicator --</option>
+	</select>
+	
+	<br>
+	<br>	
+	<p><button id="launch" type="button">Calculate indicator</button></p>
+	
+	<br>
+	<hr />
+	<br>
+	
+	<table class="blueTable" id="indicator_result">
+	
+	</table>
 
 </div>
 		
