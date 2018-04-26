@@ -40,11 +40,11 @@
                         </tr>
                         <tr>
                             <td width="78">Username</td>
-                            <td width="294"><input name="myusername" type="text" id="myusername"></td>
+                            <td width="294"><input name="myusername" type="text" id="myusername" required></td>
                         </tr>
                         <tr>
                             <td>Password</td>
-                            <td><input name="mypassword" type="password" id="mypassword"></td>
+                            <td><input name="mypassword" type="password" id="mypassword" required></td>
                         </tr>
                         <tr>
                             <td><input type="submit" name="Submit" value="Login"></td>
@@ -68,6 +68,12 @@
         $query = $connection -> query($sql);
         $result = mysqli_num_rows($query);
         if($result == 1){
+
+            session_start();
+
+            $_SESSION['myusername'] = $myusername;
+            $_SESSION['mypassword'] = $mypassword;
+
             header ("location: vw-home.php");
         } else {
             echo "<br><center>Wrong username or password!".mysqli_error($connection);

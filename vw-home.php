@@ -1,6 +1,8 @@
 <?php
 // Starting session
-session_start();
+include "session_start.php";
+
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -110,6 +112,11 @@ session_start();
 			}
 		?>
 	</div>	
+
+
+
+
+
 
 </body>
 

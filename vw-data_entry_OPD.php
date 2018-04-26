@@ -63,6 +63,18 @@ $(document).ready(function() {
 				<td><input type="text" id="r_1_8" name="r_1_8" class="numericInput" value=""></td>
 
 			</tr>
+			<tr>  
+				<td>Cholera</td>
+				<td><input type="text" id="r_2_1" name="r_2_1" class="numericInput" value=""></td>
+				<td><input type="text" id="r_2_2" name="r_2_2" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_2_3" name="r_2_3" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_2_4" name="r_2_4" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_2_5" name="r_2_5" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_2_6" name="r_2_6" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_2_7" name="r_2_7" class="numericInput" value=""></td>				
+				<td><input type="text" id="r_2_8" name="r_2_8" class="numericInput" value=""></td>
+
+			</tr>
 			<tr>
 				<td>Typhoid Fever</td>
 				<td><input type="text" id="r_10_1" name="r_10_1" class="numericInput" value=""></td>

@@ -17,7 +17,8 @@
     }
 	elseif (isset($_POST['ind']))
 	{
-        $indID = $_POST['ind'];
+        $id = $_POST['ind'];
+
         //$query= mysqli_query($connection, "SELECT * FROM indicator WHERE id = ".$id); 
 		$query= mysqli_query($connection, "SELECT * FROM indicator WHERE id = ".$id); 
 		$strsql = "select SUM(record.value) as total, what.name as disease, `when`.name as week
