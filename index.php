@@ -64,7 +64,7 @@
     if(isset($_POST['Submit'])){
         $myusername = $_POST['myusername'];
         $mypassword = $_POST['mypassword'];
-        $sql = "SELECT * FROM loginuser WHERE username = '".$myusername."' AND password='".$mypassword."'";
+        $sql = "SELECT * FROM loginuser WHERE username = '".$myusername."' AND password='".SHA1($mypassword)."'";
         $query = $connection -> query($sql);
         $result = mysqli_num_rows($query);
         if($result == 1){
